@@ -1,25 +1,5 @@
 import { ProjectCard } from "@/components/ProjectCard";
-
-const projects = [
-    {
-        title: "Hypatia Topluluk Platformu",
-        description: "Üyelerin bir araya geldiği, fikir alışverişi yaptığı ve etkinlikleri takip ettiği interaktif web platformu.",
-        imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format=fit=crop",
-        tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
-    },
-    {
-        title: "Mobil Bilgi Yarışması",
-        description: "Kullanıcıların mobil cihazlarından katılabildiği, genel kültür ve teknoloji odaklı eğlenceli bir bilgi yarışması uygulaması.",
-        imageUrl: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=1778&auto=format=fit=crop",
-        tags: ["React Native", "Firebase", "Gamification"],
-    },
-    {
-        title: "Yapay Zeka Sanat Galerisi",
-        description: "Yapay zeka modelleri tarafından üretilen sanat eserlerinin sergilendiği, dijital bir sanat galerisi projesi.",
-        imageUrl: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=1974&auto=format=fit=crop",
-        tags: ["Python", "PyTorch", "Generative AI"],
-    },
-];
+import { projects } from "@/data/projects";
 
 export default function ProjectsPage() {
     return (
@@ -34,11 +14,12 @@ export default function ProjectsPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project) => (
                         <ProjectCard
-                            key={project.title}
+                            key={project.slug}
+                            slug={project.slug}
                             title={project.title}
                             description={project.description}
                             imageUrl={project.imageUrl}
-                            tags={project.tags}
+                            tags={project.detail.categories}
                         />
                     ))}
                 </div>

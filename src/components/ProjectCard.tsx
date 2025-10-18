@@ -5,13 +5,14 @@ import Link from "next/link"; // Link'i import ediyoruz
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 type ProjectCardProps = {
-    slug: string; // slug'ı props olarak ekliyoruz
+    slug: string;
     title: string;
     description: string;
     imageUrl: string;
+    tags?: string[];
 };
 
-export const ProjectCard = ({ slug, title, description, imageUrl }: ProjectCardProps) => {
+export const ProjectCard = ({ slug, title, description, imageUrl, tags }: ProjectCardProps) => {
     return (
         // Kartın tamamını bir Link bileşeni ile sarmalıyoruz
         <Link href={`/projects/${slug}`} className="group block h-full">
@@ -30,7 +31,15 @@ export const ProjectCard = ({ slug, title, description, imageUrl }: ProjectCardP
                 </CardHeader>
                 {/* CardContent'i şimdilik boş bırakabilir veya etiketler için kullanabilirsiniz */}
                 <CardContent className="flex-grow">
-                    {/* İsteğe bağlı içerik */}
+                    {tags && tags.length > 0 && (
+                        <div className="mt-4 flex flex-wrap gap-2">
+                            {tags.map((tag) => (
+                                <span key={tag} className="rounded-full bg-hypatia-blue/10 px-3 py-1 text-xs font-medium text-hypatia-blue">
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                    )}
                 </CardContent>
             </Card>
         </Link>
