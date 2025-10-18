@@ -56,7 +56,7 @@ export const Footer = () => {
                         <ul className="space-y-3 text-sm text-muted-foreground">
                             <li className="flex items-center gap-2">
                                 <Mail className="h-4 w-4 text-hypatia-magenta" />
-                                hello@hypatia.community
+                                hypatiaateam@gmail.com
                             </li>
                         </ul>
                         {/* --- KALDIRILAN BÖLÜM --- */}
@@ -69,7 +69,7 @@ export const Footer = () => {
                     <div className="flex flex-wrap items-center gap-4">
                         <Link href="#" className="transition hover:text-hypatia-magenta">Gizlilik Politikası</Link>
                         <Link href="#" className="transition hover:text-hypatia-magenta">Kullanım Şartları</Link>
-                        <Link href="mailto:hello@hypatia.community" className="transition hover:text-hypatia-magenta">Bize Yazın</Link>
+                        <Link href="mailto:hypatiaateam@gmail.com" className="transition hover:text-hypatia-magenta">Bize Yazın</Link>
                     </div>
                 </div>
             </div>
