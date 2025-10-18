@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 }
 
 type ProjectDetailPageProps = {
-    params: { slug: string } | Promise<{ slug: string }>;
+    params: Promise<{ slug: string }>;
 };
 
 export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
