@@ -70,8 +70,8 @@ const teamMembers = [
 	{
 		name: "Ali Nazaroğlu",
 		role: "Designer",
-		linkedinUrl: "#",
-		instagramUrl: "#",
+		linkedinUrl: "https://www.linkedin.com/in/m-ali-nazaroglu-29b727176/",
+		instagramUrl: "https://www.instagram.com/m.nazaroglu/",
 		imageUrl: "/images/e-4.png",
 	},
 	{
