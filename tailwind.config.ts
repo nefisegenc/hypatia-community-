@@ -22,9 +22,11 @@ const config = {
                 sans: ["var(--font-onest)", "sans-serif"],
             },
             colors: {
-                // Mor rengini daha soluk bir tonla güncelliyoruz
-                'hypatia-purple': '#A78BFA',
-                'hypatia-pink': '#EC4899',
+                'hypatia-magenta': '#DA1FA3',
+                'hypatia-blue': '#4D88B7',
+                'hypatia-charcoal': '#2C2C2C',
+                'hypatia-purple': '#DA1FA3',
+                'hypatia-pink': '#DA1FA3',
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",

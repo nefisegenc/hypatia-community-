@@ -1,54 +1,171 @@
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    /* Yeni soluk mor rengimizin HSL değerleri */
-    --primary: 252 92% 79%;
-    --primary-foreground: 260 100% 15%;
-    /* Yeni mor üzerinde daha okunaklı bir koyu renk */
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 215.4 16.3% 46.9%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    /* Odaklanma rengini de yeni mor yapıyoruz */
-    --ring: 252 92% 79%;
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    /* Karanlık mod renklerini de yeni paletle uyumlu hale getirebiliriz, şimdilik aynı bırakıyorum */
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 252 92% 79%;
-    --primary-foreground: 260 100% 15%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 252 92% 79%;
-  }
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 17.3%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 17.3%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 17.3%;
+    --primary: 317.6 75.1% 48.8%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 206.6 42.4% 51%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 206.6 42.4% 94%;
+    --muted-foreground: 0 0% 35%;
+    --accent: 206.6 42.4% 51%;
+    --accent-foreground: 0 0% 100%;
+    --border: 206.6 32% 80%;
+    --input: 206.6 32% 80%;
+    --ring: 317.6 75.1% 48.8%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --radius: 0.75rem;
+
+    --hypatia-soft-purple: 206.6 42.4% 51%;
+    --hypatia-soft-pink: 317.6 75.1% 48.8%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    @apply antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: hsl(var(--primary));
+    @apply tracking-tight;
+  }
+}
+
+section {
+  @apply transition-colors duration-500 ease-in-out;
+}
+
+/* Slider */
+.slider-image {
+  @apply rounded-xl shadow-2xl object-cover transition-transform duration-300 ease-in-out;
+}
+
+.slider-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Kart */
+.card {
+  @apply bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Butonlar */
+.btn-primary {
+  background-color: hsl(var(--hypatia-soft-pink));
+  color: hsl(var(--primary-foreground));
+  @apply font-semibold shadow-md transition-all duration-200;
+}
+
+.btn-primary:hover {
+  background-color: hsl(var(--primary));
+  @apply shadow-lg;
+}
+
+/* Dots */
+.dot-active {
+  @apply bg-[hsl(var(--hypatia-soft-purple))] w-6;
+}
+
+.dot-inactive {
+  @apply bg-gray-300 transition-colors duration-200;
+}
+
+.dot-inactive:hover {
+  @apply bg-gray-400;
+}
+
+/* --- ARKA PLAN ANİMASYONU --- */
+@keyframes softGradientMovement {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* --- DEĞİŞİKLİK BURADA --- */
+/* Arka plan gradyanı #ddb8ea rengi ve benzer tonlarla güncellendi */
+.background-soft-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+  /* Belirtilen #ddb8ea rengi ve ona uyumlu, biraz daha açık/farklı tonlar kullanıldı */
+  background: linear-gradient(-45deg, #ddb8ea, #e8cff1, #dcd0f2);
+  background-size: 400% 400%;
+  animation: softGradientMovement 25s ease infinite;
+  /* Efektin yumuşak görünmesi için blur ve opacity ayarlandı */
+  filter: blur(70px) opacity(0.7);
+}
+
+
+/* --- YENİ VE GÜNCELLENMİŞ GEÇİŞ KATMANLARI --- */
+.fade-out-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 15rem;
+  /* Alt geçişin yüksekliği */
+  background: linear-gradient(to top, white, transparent);
+  pointer-events: none;
+  z-index: 5;
+  /* Diğer arka plan elemanlarının üzerinde, içeriğin altında */
+}
+
+/* Yeni: Yanlardan gelen yumuşak geçiş efekti */
+.fade-out-sides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Soldan ve sağdan beyaz gradyan, ortası transparan */
+  background: linear-gradient(to right, white, transparent 15%, transparent 85%, white);
+  pointer-events: none;
+  z-index: 5;
+  /* Diğer arka plan elemanlarının üzerinde, içeriğin altında */
+}
+
+/* --- YENİ: Kaydırma Çubuğunu Gizleme Sınıfı --- */
+/* Firefox */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+/* Chrome, Safari ve Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

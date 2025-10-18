@@ -7,17 +7,17 @@ import { Lightbulb, Users, GraduationCap } from "lucide-react";
 // Değerlerimizi bir dizi olarak tanımlıyoruz
 const values = [
     {
-        icon: <Lightbulb className="w-10 h-10 text-hypatia-purple" />,
+        icon: <Lightbulb className="w-10 h-10 text-hypatia-blue" />,
         title: "İnovasyon ve Yaratıcılık",
         description: "Sınırları zorlayan, yeni ve özgün fikirlerin peşinden giden bir merakı teşvik ediyoruz.",
     },
     {
-        icon: <Users className="w-10 h-10 text-hypatia-purple" />,
+        icon: <Users className="w-10 h-10 text-hypatia-blue" />,
         title: "İşbirliği ve Topluluk",
         description: "Başarının, farklı yeteneklerin bir araya geldiği, destekleyici bir ortamda yeşerdiğine inanıyoruz.",
     },
     {
-        icon: <GraduationCap className="w-10 h-10 text-hypatia-purple" />,
+        icon: <GraduationCap className="w-10 h-10 text-hypatia-blue" />,
         title: "Sürekli Öğrenme",
         description: "Teknolojinin hızına ayak uyduruyor, her projeyi kendimizi geliştirmek için bir fırsat olarak görüyoruz.",
     },
@@ -27,9 +27,9 @@ export default function AboutPage() {
     return (
         <div className="bg-white">
             {/* 1. BÖLÜM: Sayfa Başlığı */}
-            <section className="py-20 md:py-28 text-center bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-purple-50 via-white to-white">
+            <section className="py-20 md:py-28 text-center bg-[radial-gradient(ellipse_at_bottom,_rgba(77,136,183,0.2),_transparent_70%)]">
                 <div className="container mx-auto">
-                    <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-slate-900">Biz Kimiz?</h1>
+                    <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-hypatia-charcoal">Biz Kimiz?</h1>
                     <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
                         Teknolojiye yön veren, birlikte üreten ve geleceği şekillendiren genç ve dinamik bir topluluğuz.
                     </p>
@@ -40,7 +40,7 @@ export default function AboutPage() {
             <section className="py-20 md:py-24">
                 <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
                     <div className="order-2 md:order-1">
-                        <h2 className="text-3xl font-bold text-slate-900">Misyonumuz</h2>
+                        <h2 className="text-3xl font-bold text-hypatia-charcoal">Misyonumuz</h2>
                         <p className="mt-4 text-muted-foreground">
                             Hypatia olarak misyonumuz, teknolojiye ve tasarıma ilgi duyan her genci bir araya getirerek potansiyellerini en üst seviyeye çıkarmaktır. Proje bazlı öğrenme metodolojisiyle, üyelerimize gerçek dünya problemlerini çözme ve portfolyolarını zenginleştirme imkanı sunuyoruz.
                         </p>
@@ -61,10 +61,10 @@ export default function AboutPage() {
             </section>
 
             {/* 3. BÖLÜM: Değerlerimiz (Kartlar) */}
-            <section className="py-20 md:py-24 bg-slate-50">
+            <section className="py-20 md:py-24 bg-hypatia-blue/10">
                 <div className="container mx-auto">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Değerlerimiz</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-hypatia-charcoal">Değerlerimiz</h2>
                         <p className="text-lg text-muted-foreground mt-2">Bizi biz yapan temel ilkeler.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -84,13 +84,13 @@ export default function AboutPage() {
             {/* 4. BÖLÜM: Harekete Geçirici Mesaj (CTA) */}
             <section className="py-20 md:py-28 text-center">
                 <div className="container mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">Aramıza Katılmaya Hazır Mısın?</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-hypatia-charcoal">Aramıza Katılmaya Hazır Mısın?</h2>
                     <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
                         Senin gibi tutkulu insanlarla birlikte harika projeler geliştirmek için sabırsızlanıyoruz.
                     </p>
                     <div className="mt-8">
                         <Link href="/join">
-                            <Button size="lg" className="bg-hypatia-pink hover:bg-pink-600 text-white font-bold shadow-lg hover:shadow-xl transition-shadow">
+                            <Button size="lg" className="bg-hypatia-magenta hover:bg-hypatia-blue text-white font-bold shadow-lg hover:shadow-xl transition-shadow">
                                 Hemen Başvur
                             </Button>
                         </Link>

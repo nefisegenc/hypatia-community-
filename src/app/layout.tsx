@@ -1,6 +1,7 @@
+// src/app/layout.tsx (Güncellenmiş Hali)
+
 import type { Metadata } from "next";
 import { Onest } from "next/font/google";
-// BU SATIR ÇOK ÖNEMLİ! TÜM STİLLERİ BU SATIR YÜKLER.
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -23,6 +24,10 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className={onest.className}>
+        {/* HAREKETLİ ARKA PLAN İÇİN EKLENEN SATIR */}
+        <div className="background-gradient" />
+
+        {/* Orijinal sayfa yapınız korunuyor */}
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow container mx-auto p-4">
