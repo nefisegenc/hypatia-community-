@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   title: "Hypatia Community",
   description: "Genç, dinamik ve ilham veren bir topluluk.",
   icons: {
-    icon: "/images/hypatia%201%20(1).svg",
-    shortcut: "/images/hypatia%201%20(1).svg",
+    icon: "/images/favicon.png",
+    shortcut: "/images/favicon.png",
   },
 };
 
