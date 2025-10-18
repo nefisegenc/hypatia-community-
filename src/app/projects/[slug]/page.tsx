@@ -3,7 +3,6 @@
 import { projects } from "@/data/projects";
 import Image from "next/image";
 import Link from "next/link";
-import type { PageProps } from "next";
 import { notFound } from "next/navigation";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 
@@ -13,7 +12,9 @@ export async function generateStaticParams() {
     }));
 }
 
-type ProjectDetailPageProps = PageProps<{ slug: string }>;
+type ProjectDetailPageProps = {
+    params: { slug: string } | Promise<{ slug: string }>;
+};
 
 export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     const { slug } = await params;
