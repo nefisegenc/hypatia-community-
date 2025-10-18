@@ -77,8 +77,8 @@ const teamMembers = [
 	{
 		name: "Şebnem Aldemir",
 		role: "Project Manager",
-		linkedinUrl: "#",
-		instagramUrl: "#",
+		linkedinUrl: "https://www.linkedin.com/in/%C5%9Febnem-aldemir-62a189245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+		instagramUrl: "https://www.instagram.com/sebnemaldemir?igsh=b2JqZTIxN2RqeWhx&utm_source=qr",
 		imageUrl: "/images/e-3.png",
 	},
 ];
