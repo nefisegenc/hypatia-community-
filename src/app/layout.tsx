@@ -14,6 +14,10 @@ const onest = Onest({
 export const metadata: Metadata = {
   title: "Hypatia Community",
   description: "Genç, dinamik ve ilham veren bir topluluk.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
