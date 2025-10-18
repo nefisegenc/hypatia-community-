@@ -56,15 +56,15 @@ const teamMembers = [
 	{
 		name: "Öykü Kaplan",
 		role: "Founder",
-		linkedinUrl: "#",
-		instagramUrl: "#",
+		linkedinUrl: "https://www.linkedin.com/in/oyku-kaplan/",
+		instagramUrl: "https://www.instagram.com/oyku_kaplan?igsh=MWN6N2F1bTZuM2l6cQ%3D%3D&utm_source=qr",
 		imageUrl: "/images/e-1.png",
 	},
 	{
 		name: "Nefise Genç",
 		role: "Developer",
-		linkedinUrl: "#",
-		instagramUrl: "#",
+		linkedinUrl: "https://www.linkedin.com/in/nefise-gen%C3%A7-67ba66226/",
+		instagramUrl: "https://www.instagram.com/nefisegenc?igsh=OG9yMDB2ZWI1ZXZx&utm_source=qr",
 		imageUrl: "/images/e-2.png",
 	},
 	{
