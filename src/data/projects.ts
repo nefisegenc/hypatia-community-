@@ -247,11 +247,16 @@ export const projects: Project[] = [
             },
             results: {
                 title: "Beklenen Etkiler ve Hedefler",
-                paragraphs: [
-                    "• Gençler arasında uluslararası fırsatlara erişim konusunda farkındalık yaratmak",
-                    "• Gönüllülük ve kültürlerarası öğrenme kavramlarını yaygınlaştırmak",
-                    "• Gerçek hikâyeler üzerinden özgüven, ilham ve dayanışma duygusunu güçlendirmek",
-                    "• Türkiye’den daha fazla gencin Avrupa gençlik programlarına katılımını artırmak"
+                items: [
+                    {
+                        title: "",
+                        points: [
+                            "Gençler arasında uluslararası fırsatlara erişim konusunda farkındalık yaratmak.",
+                            "Gönüllülük ve kültürlerarası öğrenme kavramlarını yaygınlaştırmak.",
+                            "Gerçek hikâyeler üzerinden özgüven, ilham ve dayanışma duygusunu güçlendirmek.",
+                            "Türkiye’den daha fazla gencin Avrupa gençlik programlarına katılımını artırmak."
+                        ]
+                    }
                 ]
             },
             impact: {

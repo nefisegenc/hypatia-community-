@@ -139,9 +139,31 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                         <h2 className="text-3xl font-bold text-hypatia-charcoal sm:text-4xl">
                             {detail.results.title}
                         </h2>
-                        <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted-foreground">
-                            {detail.results.paragraphs.map((p, i) => <p key={i}>{p}</p>)}
-                        </div>
+                        {detail.results.items ? (
+                            <div className="mt-6 space-y-6 text-lg leading-relaxed text-muted-foreground">
+                                {detail.results.items.map((item, i) => (
+                                    <div key={i}>
+                                        {item.title && (
+                                            <h3 className="text-xl font-semibold text-hypatia-charcoal">{item.title}</h3>
+                                        )}
+                                        {item.text && (
+                                            <p className="mt-2">{item.text}</p>
+                                        )}
+                                        {item.points && (
+                                            <ul className="mt-3 space-y-2 text-base list-disc list-inside">
+                                                {item.points.map((point, index) => (
+                                                    <li key={index}>{point}</li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted-foreground">
+                                {detail.results.paragraphs.map((p, i) => <p key={i}>{p}</p>)}
+                            </div>
+                        )}
                     </section>
 
                     {detail.achievements && (
