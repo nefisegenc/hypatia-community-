@@ -4,7 +4,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { footerNavLinks } from "@/config/navigation"; // socialLinks import'u artık gerekli değil
 
@@ -56,6 +56,28 @@ export const Footer = () => {
                             <li className="flex items-center gap-2">
                                 <Mail className="h-4 w-4 text-hypatia-magenta" />
                                 hypatiaateam@gmail.com
+                            </li>
+                            <li>
+                                <Link
+                                    href="https://www.linkedin.com/company/hypatiaa/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 text-hypatia-charcoal transition hover:text-hypatia-magenta"
+                                >
+                                    <Linkedin className="h-4 w-4 text-hypatia-magenta" />
+                                    LinkedIn
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="https://www.instagram.com/hypatiaateam/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 text-hypatia-charcoal transition hover:text-hypatia-magenta"
+                                >
+                                    <Instagram className="h-4 w-4 text-hypatia-magenta" />
+                                    Instagram
+                                </Link>
                             </li>
                         </ul>
                         {/* --- KALDIRILAN BÖLÜM --- */}
