@@ -53,9 +53,14 @@ export const Footer = () => {
                     <div className="space-y-4">
                         <h3 className="text-sm font-semibold uppercase tracking-wider text-hypatia-magenta">İletişim</h3>
                         <ul className="space-y-3 text-sm text-muted-foreground">
-                            <li className="flex items-center gap-2">
-                                <Mail className="h-4 w-4 text-hypatia-magenta" />
-                                hypatiaateam@gmail.com
+                            <li>
+                                <Link
+                                    href="mailto:hypatiaateam@gmail.com"
+                                    className="flex items-center gap-2 text-hypatia-charcoal transition hover:text-hypatia-magenta"
+                                >
+                                    <Mail className="h-4 w-4 text-hypatia-magenta" />
+                                    hypatiaateam@gmail.com
+                                </Link>
                             </li>
                             <li>
                                 <Link
