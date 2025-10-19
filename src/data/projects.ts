@@ -111,11 +111,11 @@ export const projects: Project[] = [
     },
     {
         slug: "deprem-dayanisma-projesi-matematik",
-        title: "Deprem Dayanışma Projesi-2025",
+        title: "Deprem Dayanışma Projesi (2025)",
         description: "Depremden etkilenen 6, 7 ve 8. sınıf öğrencilerine yönelik ücretsiz ve online matematik eğitimi projesi.",
         imageUrl: "/images/h-9.jpeg",
         detail: {
-            heroTitle: "Deprem Dayanışma Projesi-2025",
+            heroTitle: "Deprem Dayanışma Projesi (2025)",
             heroSubtitle: "Ücretsiz ve Online Matematik Eğitimi",
             heroImageUrl: "/images/h-9.jpeg",
             categories: ["Eğitim", "Sosyal Dayanışma", "Afet Sonrası Destek"],
@@ -155,8 +155,8 @@ export const projects: Project[] = [
                 ],
             },
             gallery: [
-                { src: "/images/h-2.jpeg", alt: "Deprem Dayanışma Projesi-2023 ders oturumu", caption: "" },
-                { src: "/images/h-3.jpeg", alt: "Deprem Dayanışma Projesi-2023 gönüllü buluşması", caption: "" }
+                { src: "/images/h-2.jpeg", alt: "Deprem Dayanışma Projesi (2023-2025) ders oturumu", caption: "" },
+                { src: "/images/h-3.jpeg", alt: "Deprem Dayanışma Projesi (2023-2025) gönüllü buluşması", caption: "" }
             ],
             finalMessage: {
                 title: "",
@@ -266,11 +266,11 @@ export const projects: Project[] = [
     },
     {
         slug: "deprem-dayanisma-matematik-2023",
-        title: "Deprem Dayanışma Projesi-2023",
+        title: "Deprem Dayanışma Projesi (2023-2025)",
         description: "Şubat 2023 depremi sonrası 6, 7 ve 8. sınıf öğrencilerine yönelik ücretsiz ve online matematik eğitimi projesi.",
         imageUrl: "/images/h-1.jpeg",
         detail: {
-            heroTitle: "Deprem Dayanışma Projesi-2023",
+            heroTitle: "Deprem Dayanışma Projesi (2023-2025)",
             heroSubtitle: "Matematikle Umudu Yeniden Kuruyoruz",
             heroImageUrl: "/images/h-1.jpeg",
             categories: ["Eğitimde Fırsat Eşitliği", "Sosyal Sorumluluk", "Gönüllülük"],
@@ -320,8 +320,8 @@ export const projects: Project[] = [
                 ]
             },
             gallery: [
-                { src: "/images/h-9.jpeg", alt: "Deprem Dayanışma Projesi-2025 öğrenci buluşması", caption: "" },
-                { src: "/images/h-10.jpeg", alt: "Deprem Dayanışma Projesi-2025 dayanışma anı", caption: "" }
+                { src: "/images/h-9.jpeg", alt: "Deprem Dayanışma Projesi (2025) öğrenci buluşması", caption: "" },
+                { src: "/images/h-10.jpeg", alt: "Deprem Dayanışma Projesi (2025) dayanışma anı", caption: "" }
             ],
             finalMessage: {
                 title: "",
