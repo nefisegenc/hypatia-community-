@@ -391,8 +391,8 @@ export const projects: Project[] = [
             },
             finalMessage: {
                 title: "",
-                closing: "Hypatia olarak, gençlerin potansiyeline ve söz hakkına olan inancımız tam.",
-                quote: "“Liseli Talks” çok yakında yeniden hayat bulacak — bu kez daha güçlü bir şekilde. 🚀"
+                closing: "",
+                quote: "Hypatia olarak, gençlerin potansiyeline ve söz hakkına olan inancımız tam."
             }
         }
     }
