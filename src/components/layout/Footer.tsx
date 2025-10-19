@@ -24,8 +24,7 @@ export const Footer = () => {
                             />
                         </Link>
                         <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
-                            Gençlerin ve kadınların sosyal fayda üretmek için bir araya geldiği Hypatia topluluğu,
-                            teknoloji ve tasarım odaklı projelerle sürdürülebilir etki yaratmayı hedefler.
+                            Kaliteli ve erişilebilir eğitimi desteklemek, toplumsal cinsiyet eşitliğini sağlamak ve gençler ile kadınların güçlenmesi için sosyal fayda odaklı projeler üretiyoruz.
                         </p>
                         <Button
                             asChild

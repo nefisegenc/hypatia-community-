@@ -86,7 +86,7 @@ const teamMembers = [
 const coreValues = [
 	{
 		icon: Heart,
-		title: "Kadın ve Gençlerin Güçlenmesi",
+		title: "Kadınları ve Gençleri Güçlendirmek",
 		description: "Gençler ve kadınlar hayaller kurar, harekete geçer ve ilham verir.",
 		color: "#661a91",
 		tint: "rgba(102, 26, 145, 0.12)",
