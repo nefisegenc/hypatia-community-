@@ -1,10 +1,12 @@
 // src/app/projects/[slug]/page.tsx
 
 import { projects } from "@/data/projects";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
+
+import { ProjectGallery } from "@/components/projects/ProjectGallery";
 
 export async function generateStaticParams() {
     return projects.map((project) => ({
@@ -188,25 +190,9 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 </div>
             </div>
 
-            {detail.gallery && (
+            {detail.gallery && detail.gallery.length > 0 && (
                 <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {detail.gallery.map((image, i) => (
-                            <div key={i} className="flex flex-col">
-                                <Image
-                                    src={image.src}
-                                    alt={image.alt}
-                                    width={1200}
-                                    height={900}
-                                    className="w-full rounded-2xl shadow-xl object-cover aspect-[4/3]"
-                                    style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
-                                />
-                                {image.caption.trim() && (
-                                    <p className="mt-4 text-center text-sm text-muted-foreground">{image.caption}</p>
-                                )}
-                            </div>
-                        ))}
-                    </div>
+                    <ProjectGallery images={detail.gallery} />
                 </section>
             )}
 

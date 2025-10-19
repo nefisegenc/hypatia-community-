@@ -315,9 +315,10 @@ export const projects: Project[] = [
             goal: {
                 title: "Projenin Amacı",
                 paragraphs: [
-                    "Depremin ardından eğitimde yaşanan kesintiler, binlerce öğrencinin geleceğini etkiledi. Hypatia Topluluğu olarak, bu zorlu dönemde gençlerin yanında olabilmek amacıyla yeniden Deprem Dayanışma Projesini başlattık.",
-                    "Bu projenin temel hedefi, depremden etkilenen 6., 7. ve 8. sınıf öğrencilerine ücretsiz ve online matematik eğitimi sunarak onların akademik, duygusal ve sosyal olarak güçlenmelerine destek olmaktır.",
-                    "Eğitim bir ayrıcalık değil, bir dayanışma biçimidir. Bu anlayışla hareket eden proje, yalnızca ders desteği değil; aynı zamanda öğrencilerin yeniden umut kurabildikleri bir öğrenme alanı oluşturur."
+                    "Depremin üzerinden iki yılı aşkın süre geçti, ancak hâlâ 650.000’den fazla insan konteynerlerde yaşıyor. Bu yalnızca bir barınma sorunu değil — aynı zamanda eğitimdeki eşitsizliklerin en somut yansıması.",
+                    "Hypatia Topluluğu olarak bu gerçeği unutmuyor, dayanışmamızı her geçen gün büyütüyoruz. Daha önce büyük bir özveri ve başarıyla yürüttüğümüz Deprem Dayanışma Projesini bu yıl yeniden hayata geçiriyoruz.",
+                    "Projenin amacı, depremden etkilenen 6., 7. ve 8. sınıf öğrencilerine ücretsiz ve online matematik eğitimi sunarak onların akademik, duygusal ve sosyal olarak güçlenmelerine destek olmaktır.",
+                    "Bizim için eğitim bir ayrıcalık değil, dayanışmanın en güçlü biçimidir. Bu proje yalnızca ders desteği değil; gençlerin yeniden umut kurabildikleri, kendilerini güvende hissedebildikleri bir öğrenme alanı yaratır."
                 ],
             },
             scope: {
