@@ -10,6 +10,7 @@ type GalleryImage = {
     src: string;
     alt: string;
     caption: string;
+    objectPosition?: string;
 };
 
 // Ana Proje Tipini güncelleyelim
@@ -201,7 +202,7 @@ export const projects: Project[] = [
             },
             gallery: [
                 { src: "/images/h-4.jpeg", alt: "Mentorluk programı katılımcıları", caption: "" },
-                { src: "/images/h-5.jpeg", alt: "Mentor ve öğrencinin birlikte çalışması", caption: "" }
+                { src: "/images/h-5.jpeg", alt: "Mentor ve öğrencinin birlikte çalışması", caption: "", objectPosition: "left center" }
             ],
             finalMessage: {
                 title: "",

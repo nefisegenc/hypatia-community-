@@ -153,7 +153,14 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {detail.gallery.map((image, i) => (
                             <div key={i} className="flex flex-col">
-                                <Image src={image.src} alt={image.alt} width={1200} height={900} className="w-full rounded-2xl shadow-xl object-cover aspect-[4/3]" />
+                                <Image
+                                    src={image.src}
+                                    alt={image.alt}
+                                    width={1200}
+                                    height={900}
+                                    className="w-full rounded-2xl shadow-xl object-cover aspect-[4/3]"
+                                    style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
+                                />
                                 {image.caption.trim() && (
                                     <p className="mt-4 text-center text-sm text-muted-foreground">{image.caption}</p>
                                 )}
