@@ -67,11 +67,11 @@ export const projects: Project[] = [
             heroTitle: "Regl Farkındalığı",
             heroSubtitle: "Konuşalım, Normalleştirelim, Güçlenelim",
             heroImageUrl: "/IMG_0771.JPG",
-            categories: ["Toplumumsal Cinsiyet", "Farkındalık", "Sağlık"],
+            categories: ["Toplumsal", "Farkındalık", "Sağlık"],
             goal: {
                 title: "Projenin Amacı",
                 paragraphs: [
-                    "“Regl Farkındalığı” projesiyle, reglin biyolojik ve doğal bir döngü olduğu bilincini artırarak toplumda farkındalık yaratmayı hedefliyoruz.", "Bu konuda yalnızca kadınların değil, kadın ve erkeklerin birlikte bilinçlenmesinin toplumsal dönüşüm için kritik olduğuna inanıyoruz.", "Regl; utanç, tabu ya da gizlenmesi gereken bir konu değil — hayatın doğal bir parçasıdır.", "Ancak “regl tabuları” ve “regl yoksulluğu”, hem dünyada hem de Türkiye’de halen ciddi bir toplumsal eşitsizlik yaratıyor.", "Biz, bu sessizliği kırmak ve “yalnız değiliz” demek için bu projeyi hayata geçirdik. 🌸"
+                    "“Regl Farkındalığı” projesiyle, reglin biyolojik ve doğal bir döngü olduğu bilincini artırarak toplumda farkındalık yaratmayı hedefliyoruz.", "Bu konuda yalnızca kadınların değil, kadın ve erkeklerin birlikte bilinçlenmesinin toplumsal dönüşüm için kritik olduğuna inanıyoruz.", "Regl; utanç, tabu ya da gizlenmesi gereken bir konu değil — hayatın doğal bir parçasıdır.", "Ancak “regl tabuları” ve “regl yoksulluğu”, hem dünyada hem de Türkiye’de halen ciddi bir toplumsal eşitsizlik yaratıyor.", "Biz, bu sessizliği kırmak ve “yalnız değiliz” demek için bu projeyi hayata geçirdik."
                 ],
             },
             scope: {
