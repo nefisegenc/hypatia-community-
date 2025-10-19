@@ -55,28 +55,28 @@ const sliderImages = [
 const teamMembers = [
 	{
 		name: "Öykü Kaplan",
-		role: "Founder",
+		role: "Kurucu",
 		linkedinUrl: "https://www.linkedin.com/in/oyku-kaplan/",
 		instagramUrl: "https://www.instagram.com/oyku_kaplan?igsh=MWN6N2F1bTZuM2l6cQ%3D%3D&utm_source=qr",
 		imageUrl: "/images/e-1.png",
 	},
 	{
 		name: "Nefise Genç",
-		role: "Developer",
+		role: "Geliştirici",
 		linkedinUrl: "https://www.linkedin.com/in/nefise-gen%C3%A7-67ba66226/",
 		instagramUrl: "https://www.instagram.com/nefisegenc?igsh=OG9yMDB2ZWI1ZXZx&utm_source=qr",
 		imageUrl: "/images/e-2.png",
 	},
 	{
 		name: "Ali Nazaroğlu",
-		role: "Designer",
+		role: "Tasarımcı",
 		linkedinUrl: "https://www.linkedin.com/in/m-ali-nazaroglu-29b727176/",
 		instagramUrl: "https://www.instagram.com/m.nazaroglu/",
 		imageUrl: "/images/e-4.png",
 	},
 	{
 		name: "Şebnem Aldemir",
-		role: "Project Manager",
+		role: "Proje Yöneticisi",
 		linkedinUrl: "https://www.linkedin.com/in/%C5%9Febnem-aldemir-62a189245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
 		instagramUrl: "https://www.instagram.com/sebnemaldemir?igsh=b2JqZTIxN2RqeWhx&utm_source=qr",
 		imageUrl: "/images/e-3.png",
