@@ -161,7 +161,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                             </div>
                         ) : (
                             <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted-foreground">
-                                {detail.results.paragraphs.map((p, i) => <p key={i}>{p}</p>)}
+                                {(detail.results.paragraphs ?? []).map((p, i) => <p key={i}>{p}</p>)}
                             </div>
                         )}
                     </section>
