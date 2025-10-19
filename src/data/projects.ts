@@ -239,7 +239,7 @@ export const projects: Project[] = [
             goal: {
                 title: "Projenin Amacı",
                 paragraphs: [
-                    "Gençlik Haritası, Hypatia tarafından hayata geçirilen bir video serisidir.",
+                    "Gençlik Haritası, Hypatia topluluğu tarafından hayata geçirilen bir video serisidir.",
                     "Bu serinin amacı, yurtdışına çıkan gençlerin deneyimlerini görünür kılmak, gençler arasında ilham paylaşımını güçlendirmek ve uluslararası gönüllülük, eğitim ve kültürel değişim fırsatları hakkında farkındalık yaratmaktır.",
                     "Seri, “Bir gün ben de yapabilir miyim?” diyen gençlere cesaret, yol göstericilik ve umut aşılamayı hedefliyor. 🌍✨"
                 ]
@@ -306,7 +306,7 @@ export const projects: Project[] = [
                 title: "Projenin Amacı",
                 paragraphs: [
                     "Şubat 2023 depremi sonrasında eğitimde kesintiye uğrayan 6., 7. ve 8. sınıf öğrencilerine ücretsiz ve çevrimiçi matematik eğitimi sağlamak amacıyla bu programı başlattık.",
-                    "Hızlı bir çözüm modeli olarak tasarlanan proje, Mart 2023’te hayata geçirildi ve ilk etapta üç ay sürdü. Haziran 2023’teki ilk mezuniyet dönemine 100’ün üzerinde öğrenci katıldı. Hem öğrencilerden hem de gönüllü öğretmenlerden oldukça olumlu geri bildirimler alındı.",
+                    "Hızlı bir çözüm modeli olarak tasarlanan proje, Mart 2023’te hayata geçirildi ve ilk etapta üç ay sürmesi planlandı. Haziran 2023’teki ilk mezuniyet dönemine 100’ün üzerinde öğrenci katıldı. Hem öğrencilerden hem de gönüllü öğretmenlerden oldukça olumlu geri bildirimler alındı.",
                     "Elde edilen bu başarıların ardından program genişletilerek toplam 2,5 yıl boyunca devam etti. Haziran 2025’te tüm öğrencilerimizi liseye uğurlayarak projenin kapanışını büyük bir gururla gerçekleştirdik.",
                     "Bu süreçte amacımız yalnızca matematik öğretmek değil; aynı zamanda, afetin ardından öğrencilerin yanında olduğumuzu hissettirmekti. Toplamda 40’tan fazla gönüllü öğretmenle 300’ün üzerinde öğrenciye ulaştık."
                 ],
