@@ -169,11 +169,11 @@ export const projects: Project[] = [
         slug: "deprem-mentorluk-programi",
         title: "Depremden Etkilenmiş Liseliler için Mentorluk Programı",
         description: "Depremden etkilenen lise öğrencilerinin akademik ve duygusal ihtiyaçlarını desteklemek için gönüllü mentorlarla eşleştirildiği, uzun soluklu bir gelişim programı.",
-        imageUrl: "/images/h-4.jpeg",
+        imageUrl: "/images/h-6.jpeg",
         detail: {
             heroTitle: "Hypatia Mentorluk Programı",
             heroSubtitle: "Depremden Etkilenen Gençlerle Güçlü Bir Geleceğe",
-            heroImageUrl: "/images/h-4.jpeg",
+            heroImageUrl: "/images/h-6.jpeg",
             categories: ["Eğitim", "Mentorluk", "Gönüllülük", "Gençlik"],
             goal: {
                 title: "Arka Plan ve Amacımız",
