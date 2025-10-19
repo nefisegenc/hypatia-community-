@@ -134,7 +134,7 @@ export const projects: Project[] = [
                 items: [
                     { title: "Hedef Kitle:", text: "Depremden etkilenen bölgelerde öğrenim gören 6., 7. ve 8. sınıf öğrencileri." },
                     { title: "Yöntem:", text: "Eğitimler tamamen çevrimiçi platformlar (Zoom, Google Meet) üzerinden yürütülmektedir. Her öğrenci grubu, gönüllü matematik öğretmenleri tarafından haftalık derslerle desteklenmektedir." },
-                    { title: "Süre:", text: "Proje, Mart 2023’te başlatılmış; 2,5 yıl boyunca kesintisiz sürdürülmüş ve yüzlerce öğrencinin liseye geçişine eşlik etmiştir. 2025 itibarıyla yeni dönem başlamış olup, aynı modelle 130+ yeni öğrenciye ulaşılmıştır." },
+                    { title: "Süre:", text: "Proje, Mart 2023’te başlatılmış; 2,5 yıl boyunca kesintisiz sürdürülmüş ve yüzlerce öğrencinin liseye geçişine eşlik etmiştir. 2025 itibarıyla yeni dönem başlamış olup, aynı modelle 120+ yeni öğrenciye ulaşılmıştır." },
                     { title: "Kapsam ve İçerik:", text: "Matematik müfredatına uygun konu anlatımları, soru çözümleri, deneme sınavları ve mentorluk temelli öğrenme desteği sağlanmaktadır. Öğrenciler, yalnızca akademik olarak değil; özgüven, motivasyon ve aidiyet açısından da desteklenmektedir." }
                 ],
             },
@@ -143,7 +143,7 @@ export const projects: Project[] = [
                 paragraphs: [
                     "1. Başlangıç (2023 Mart): Kriz sonrası hızlı müdahale modeliyle pilot program başlatıldı.",
                     "2. Büyüme (2023–2024): 40’tan fazla gönüllü öğretmenle 300’ü aşkın öğrenciye ulaşıldı.",
-                    "3. Tamamlanma (2025 Haziran): İlk dönem başarıyla tamamlanarak öğrenciler liseye uğurlandı.",
+                    "3. Tamamlanma (2025 Haziran): İlk proje başarıyla tamamlanarak öğrenciler liseye uğurlandı.",
                     "4. Yeniden Başlangıç (2025 Eylül): Yeni dönemde 130+ öğrenciyle program yeniden başlatıldı."
                 ],
             },
