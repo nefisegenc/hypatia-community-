@@ -62,7 +62,7 @@ const teamMembers = [
 	},
 	{
 		name: "Nefise Genç",
-		role: "Geliştirici",
+		role: "Yazılım Geliştiricisi",
 		linkedinUrl: "https://www.linkedin.com/in/nefise-gen%C3%A7-67ba66226/",
 		instagramUrl: "https://www.instagram.com/nefisegenc?igsh=OG9yMDB2ZWI1ZXZx&utm_source=qr",
 		imageUrl: "/images/e-2.png",
