@@ -109,6 +109,27 @@ export const projects: Project[] = [
                 quote: "“Regl utanılacak bir şey değil, konuşulacak bir şeydir.”",
                 closing: "Birlikte öğrenerek, birlikte farkında olduğumuz yarınlara! ✨",
             },
+        }
+    },
+    {
+        slug: "deprem-dayanisma-matematik-2023",
+        title: "Deprem Dayanışma Projesi (2023-2025)",
+        description: "Şubat 2023 depremi sonrası 6, 7 ve 8. sınıf öğrencilerine yönelik ücretsiz ve online matematik eğitimi projesi.",
+        imageUrl: "/images/h-1.jpeg",
+        detail: {
+            heroTitle: "Deprem Dayanışma Projesi (2023-2025)",
+            heroSubtitle: "Matematikle Umudu Yeniden Kuruyoruz",
+            heroImageUrl: "/images/h-1.jpeg",
+            categories: ["Eğitimde Fırsat Eşitliği", "Sosyal Sorumluluk", "Gönüllülük"],
+            goal: {
+                title: "Projenin Amacı",
+                paragraphs: [
+                    "Şubat 2023 depremi sonrasında eğitimde kesintiye uğrayan 6., 7. ve 8. sınıf öğrencilerine ücretsiz ve çevrimiçi matematik eğitimi sağlamak amacıyla bu programı başlattık.",
+                    "Hızlı bir çözüm modeli olarak tasarlanan proje, Mart 2023’te hayata geçirildi ve ilk etapta üç ay sürmesi planlandı. Haziran 2023’teki ilk mezuniyet dönemine 100’ün üzerinde öğrenci katıldı. Hem öğrencilerden hem de gönüllü öğretmenlerden oldukça olumlu geri bildirimler alındı.",
+                    "Elde edilen bu başarıların ardından program genişletilerek toplam 2,5 yıl boyunca devam etti. Haziran 2025’te tüm öğrencilerimizi liseye uğurlayarak projenin kapanışını büyük bir gururla gerçekleştirdik.",
+                    "Bu süreçte amacımız yalnızca matematik öğretmek değil; aynı zamanda, afetin ardından öğrencilerin yanında olduğumuzu hissettirmekti. Toplamda 40’tan fazla gönüllü öğretmenle 300’ün üzerinde öğrenciye ulaştık."
+                ],
+            },
             scope: {
                 title: "Projenin Kapsamı",
                 items: [
@@ -154,7 +175,7 @@ export const projects: Project[] = [
                 quote: "Eğitim bir ayrıcalık değil, bir dayanışma biçimidir.",
                 closing: "Deprem Dayanışma Projesi, afet sonrası eğitimde topluluk temelli dayanıklılığın, dijital gönüllülüğün ve akran destekli öğrenmenin gücünü ortaya koydu."
             }
-        }
+        },
     },
     {
         slug: "deprem-dayanisma-projesi-matematik",
@@ -337,7 +358,6 @@ export const projects: Project[] = [
             },
         }
     },
-    // --- YENİ EKLENEN PROJE ---
     {
         slug: "liseli-talks",
         title: "Liseli Talks",
