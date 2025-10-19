@@ -59,7 +59,7 @@ export const Footer = () => {
                                     className="flex items-center gap-2 text-hypatia-charcoal transition hover:text-hypatia-magenta"
                                 >
                                     <Mail className="h-4 w-4 text-hypatia-magenta" />
-                                    hypatiaateam@gmail.com
+                                    Mail
                                 </Link>
                             </li>
                             <li>

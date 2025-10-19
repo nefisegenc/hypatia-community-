@@ -69,7 +69,7 @@ export const projects: Project[] = [
             heroTitle: "Regl Farkındalığı",
             heroSubtitle: "Konuşalım, Normalleştirelim, Güçlenelim",
             heroImageUrl: "/IMG_0771.JPG",
-            categories: ["Toplumsal", "Farkındalık", "Sağlık"],
+            categories: ["Toplumsal Farkındalık", "Sağlık"],
             goal: {
                 title: "Projenin Amacı",
                 paragraphs: [
@@ -84,7 +84,7 @@ export const projects: Project[] = [
                 ],
                 supporters: [
                     { name: "@kotexturkiye", url: "https://www.instagram.com/kotexturkiye", note: "Ped sponsorluğu ve farkındalık desteği" },
-                    { name: "@beije.co", url: "https://beije.co/", note: "Ped sponsorluğu ve farkındalık desteği" },
+                    { name: "@beije.co", url: "https://www.instagram.com/beijewomen/", note: "Ped sponsorluğu ve farkındalık desteği" },
                     { name: "@peddonofficial", url: "https://www.instagram.com/peddonofficial", note: "Etkinlik desteği ve katılımı" },
                 ],
             },
