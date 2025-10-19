@@ -368,14 +368,21 @@ export const projects: Project[] = [
                 title: "Projenin Kapsamı",
                 items: [
                     { title: "Hedef Kitle:", text: "15–18 yaş aralığındaki lise öğrencileri." },
-                    { title: "İçerik:", text: "○ Kısa bireysel konuşmalar (talks) ve paylaşım etkinlikleri 🎙️ ○ İfade becerilerini ve sahne hakimiyetini geliştiren atölye çalışmaları 💬 ○ Dijital yayın ve video serileri aracılığıyla gençlerin hikâyelerinin görünür kılınması 🌍" },
+                    {
+                        title: "İçerik:",
+                        points: [
+                            "Kısa bireysel konuşmalar (talks) ve paylaşım etkinlikleri.",
+                            "İfade becerilerini ve sahne hakimiyetini geliştiren atölye çalışmaları.",
+                            "Dijital yayın ve video serileri aracılığıyla gençlerin hikâyelerinin görünür kılınması."
+                        ]
+                    },
                     { title: "Yöntem:", text: "“Liseli Talks”, başlangıçta dört haftalık bir pilot faz olarak tasarlanmıştır. Bu pilot uygulamanın ardından, proje sonuçlarına göre daha uzun süreli ve yüz yüze oturumlarla genişletilmesi planlanmaktadır." }
                 ]
             },
             impact: {
                 title: "Gelecek Planı",
                 paragraphs: [
-                    "Hypatia Topluluğu, “Liseli Talks”un 📅 yeniden başlatılacağı dönemde, daha geniş bir gençlik kitlesine ulaşmayı, 🎥 dijital yayın formatını zenginleştirmeyi ve 💜 gençlerin hikâyelerini ulusal ölçekte duyurmayı hedeflemektedir."
+                    "Hypatia Topluluğu, “Liseli Talks”un yeniden başlatılacağı dönemde daha geniş bir gençlik kitlesine ulaşmayı, dijital yayın formatını zenginleştirmeyi ve gençlerin hikâyelerini ulusal ölçekte duyurmayı hedeflemektedir."
                 ]
             },
             results: {
