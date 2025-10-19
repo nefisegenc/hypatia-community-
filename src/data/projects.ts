@@ -334,8 +334,8 @@ export const projects: Project[] = [
                 ]
             },
             gallery: [
-                { src: "/images/h-9.jpeg", alt: "Deprem Dayanışma Projesi (2025) öğrenci buluşması", caption: "" },
-                { src: "/images/h-10.jpeg", alt: "Deprem Dayanışma Projesi (2025) dayanışma anı", caption: "" }
+                { src: "/images/h-2.jpeg", alt: "Deprem Dayanışma Projesi (2023-2025) ders oturumu", caption: "" },
+                { src: "/images/h-3.jpeg", alt: "Deprem Dayanışma Projesi (2023-2025) gönüllü buluşması", caption: "" }
             ],
             finalMessage: {
                 title: "",
