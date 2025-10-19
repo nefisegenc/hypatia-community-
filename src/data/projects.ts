@@ -176,7 +176,7 @@ export const projects: Project[] = [
             heroTitle: "Hypatia Mentorluk Programı",
             heroSubtitle: "Depremden Etkilenen Gençlerle Güçlü Bir Geleceğe",
             heroImageUrl: "/images/h-6.jpeg",
-            categories: ["Eğitim", "Mentorluk", "Gönüllülük", "Gençlik"],
+            categories: ["Eğitim", "Mentorluk", "Gönüllülük", "Gençlik Güçlenmesi"],
             goal: {
                 title: "Arka Plan ve Amacımız",
                 paragraphs: [
@@ -186,7 +186,7 @@ export const projects: Project[] = [
             scope: {
                 title: "Projenin Kapsamı",
                 items: [
-                    { title: "Hedef Kitle:", text: "Depremden etkilenen bölgelerde öğrenim gören 9., 10. ve 11. sınıf öğrencileri (menteeler)" }, { title: "Mentor Profili:", text: "Gönüllü üniversite öğrencileri ve yetişkin mentorlar, deneyimleriyle gençlere rehberlik edecek." }, { title: "İçerik:", text: "3 ay sürecek bu programda mentorlar, öğrencilerin akademik hedeflerine ulaşmalarına destek olacak; ders çalışma yöntemleri, motivasyon, öz farkındalık ve gelecek planlaması gibi alanlarda rehberlik sağlayacak." }, { title: "Yaklaşım:", text: "Öğrencilerin kendilerini özgürce ifade edebilecekleri, güvenli ve kapsayıcı bir iletişim alanı oluşturulacak. Amaç, yaşanan zorlukların geleceğin önüne geçmesine izin vermemek — umudu ve özgüveni yeniden inşa etmek." }
+                    { title: "Hedef Kitle:", text: "Depremden etkilenen bölgelerde öğrenim gören 9., 10. ve 11. sınıf öğrencileri (menteeler)." }, { title: "Mentor Profili:", text: "Gönüllü üniversite öğrencileri ve yetişkin mentorlar, deneyimleriyle gençlere rehberlik edecek." }, { title: "İçerik:", text: "3 ay sürecek bu programda mentorlar, öğrencilerin akademik hedeflerine ulaşmalarına destek olacak; ders çalışma yöntemleri, motivasyon, öz farkındalık ve gelecek planlaması gibi alanlarda rehberlik sağlayacak." }, { title: "Yaklaşım:", text: "Öğrencilerin kendilerini özgürce ifade edebilecekleri, güvenli ve kapsayıcı bir iletişim alanı oluşturulacak. Amaç, yaşanan zorlukların geleceğin önüne geçmesine izin vermemek — umudu ve özgüveni yeniden inşa etmek." }
                 ]
             },
             impact: {
@@ -197,8 +197,22 @@ export const projects: Project[] = [
             },
             results: {
                 title: "Beklenen Sonuçlar",
-                paragraphs: [
-                    "🌱 Kısa Vadede: • Gençlerin eğitim motivasyonu, özgüveni ve hedef bilinci artar. • Mentor-mentee eşleşmeleri sayesinde güçlü bir dayanışma ağı kurulur.", "🌍 Uzun Vadede: • Eğitime erişimde fırsat eşitliği güçlenir. • Üniversiteye hazırlık süreçleri daha bilinçli ve planlı ilerler. • Gönüllülük bilinci ve toplumsal sorumluluk anlayışı yaygınlaşır."
+                items: [
+                    {
+                        title: "Kısa Vadede",
+                        points: [
+                            "Gençlerin eğitim motivasyonu, özgüveni ve hedef bilinci artar.",
+                            "Mentor-mentee eşleşmeleri sayesinde güçlü bir dayanışma ağı kurulur."
+                        ]
+                    },
+                    {
+                        title: "Uzun Vadede",
+                        points: [
+                            "Eğitime erişimde fırsat eşitliği güçlenir.",
+                            "Üniversiteye hazırlık süreçleri daha bilinçli ve planlı ilerler.",
+                            "Gönüllülük bilinci ve toplumsal sorumluluk anlayışı yaygınlaşır."
+                        ]
+                    }
                 ]
             },
             gallery: [
