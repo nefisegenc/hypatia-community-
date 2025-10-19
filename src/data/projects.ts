@@ -202,7 +202,7 @@ export const projects: Project[] = [
             },
             gallery: [
                 { src: "/images/h-4.jpeg", alt: "Mentorluk programı katılımcıları", caption: "" },
-                { src: "/images/h-5.jpeg", alt: "Mentor ve öğrencinin birlikte çalışması", caption: "", objectPosition: "left center" }
+                { src: "/images/h-5.jpeg", alt: "Mentor ve öğrencinin birlikte çalışması", caption: "", objectPosition: "center left" }
             ],
             finalMessage: {
                 title: "",
