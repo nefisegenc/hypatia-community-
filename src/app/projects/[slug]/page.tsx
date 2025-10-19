@@ -24,6 +24,11 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         notFound();
     }
     const { detail } = project;
+    const hasResultsSection = Boolean(
+        detail.results?.title?.trim() ||
+        (detail.results?.items && detail.results.items.length > 0) ||
+        (detail.results?.paragraphs && detail.results.paragraphs.length > 0)
+    );
 
     return (
         <main className="bg-white">
@@ -40,7 +45,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                     <div className="absolute inset-0 bg-black/60 bg-gradient-to-t from-black/70 to-transparent" />
                 </div>
                 <div className="container relative z-10 mx-auto flex flex-col items-center px-4">
-					<Link href="/#projects" className="group mb-6 inline-flex items-center gap-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
+                    <Link href="/#projects" className="group mb-6 inline-flex items-center gap-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
                         <ArrowLeft size={16} className="transition-transform group-hover:-translate-x-1" />
                         Tüm Projelere Dön
                     </Link>
@@ -135,9 +140,9 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                         </div>
                     </section>
 
-                    {(detail.results.title || detail.results.items?.length || detail.results.paragraphs?.length) && (
+                    {hasResultsSection && detail.results && (
                         <section>
-                            {detail.results.title && (
+                            {detail.results.title && detail.results.title.trim() && (
                                 <h2 className="text-3xl font-bold text-hypatia-charcoal sm:text-4xl">
                                     {detail.results.title}
                                 </h2>
