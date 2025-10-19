@@ -43,7 +43,8 @@ export type Project = {
         };
         results: {
             title: string;
-            paragraphs: string[];
+            paragraphs?: string[];
+            items?: { title?: string; text?: string; points?: string[]; }[];
         };
         achievements?: { // Opsiyonel başarılar bölümü
             title: string;
