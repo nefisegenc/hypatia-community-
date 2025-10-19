@@ -72,7 +72,7 @@ const teamMembers = [
 		role: "Tasarımcı",
 		linkedinUrl: "https://www.linkedin.com/in/m-ali-nazaroglu-29b727176/",
 		instagramUrl: "https://www.instagram.com/m.nazaroglu/",
-		imageUrl: "/images/e-4.png",
+		imageUrl: "/images/e-4.jpeg",
 	},
 	{
 		name: "Şebnem Aldemir",

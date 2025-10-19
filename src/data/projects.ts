@@ -226,8 +226,8 @@ export const projects: Project[] = [
                 ]
             },
             gallery: [
-                { src: "/images/h-4.jpeg", alt: "Mentorluk programı katılımcıları", caption: "" },
-                { src: "/images/h-5.jpeg", alt: "Mentor ve öğrencinin birlikte çalışması", caption: "", objectPosition: "40% center" }
+                { src: "/images/h-4.png", alt: "Mentorluk programı katılımcıları", caption: "" },
+                { src: "/images/h-5.png", alt: "Mentor ve öğrencinin birlikte çalışması", caption: "", objectPosition: "40% center" }
             ],
             finalMessage: {
                 title: "",
