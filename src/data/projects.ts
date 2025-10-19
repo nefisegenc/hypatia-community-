@@ -109,27 +109,53 @@ export const projects: Project[] = [
                 quote: "“Regl utanılacak bir şey değil, konuşulacak bir şeydir.”",
                 closing: "Birlikte öğrenerek, birlikte farkında olduğumuz yarınlara! ✨",
             },
-        }
-    },
-    {
-        slug: "deprem-dayanisma-matematik-2023",
-        title: "Deprem Dayanışma Projesi (2023-2025)",
-        description: "Şubat 2023 depremi sonrası 6, 7 ve 8. sınıf öğrencilerine yönelik ücretsiz ve online matematik eğitimi projesi.",
-        imageUrl: "/images/h-1.jpeg",
-        detail: {
-            heroTitle: "Deprem Dayanışma Projesi (2023-2025)",
-            heroSubtitle: "Matematikle Umudu Yeniden Kuruyoruz",
-            heroImageUrl: "/images/h-1.jpeg",
-            categories: ["Eğitimde Fırsat Eşitliği", "Sosyal Sorumluluk", "Gönüllülük"],
-            goal: {
-                title: "Projenin Amacı",
-                paragraphs: [
-                    "Şubat 2023 depremi sonrasında eğitimde kesintiye uğrayan 6., 7. ve 8. sınıf öğrencilerine ücretsiz ve çevrimiçi matematik eğitimi sağlamak amacıyla bu programı başlattık.",
-                    "Hızlı bir çözüm modeli olarak tasarlanan proje, Mart 2023’te hayata geçirildi ve ilk etapta üç ay sürmesi planlandı. Haziran 2023’teki ilk mezuniyet dönemine 100’ün üzerinde öğrenci katıldı. Hem öğrencilerden hem de gönüllü öğretmenlerden oldukça olumlu geri bildirimler alındı.",
-                    "Elde edilen bu başarıların ardından program genişletilerek toplam 2,5 yıl boyunca devam etti. Haziran 2025’te tüm öğrencilerimizi liseye uğurlayarak projenin kapanışını büyük bir gururla gerçekleştirdik.",
-                    "Bu süreçte amacımız yalnızca matematik öğretmek değil; aynı zamanda, afetin ardından öğrencilerin yanında olduğumuzu hissettirmekti. Toplamda 40’tan fazla gönüllü öğretmenle 300’ün üzerinde öğrenciye ulaştık."
+            scope: {
+                title: "Projenin Kapsamı",
+                items: [
+                    { title: "1. Hedef Kitle:", text: "Depremden etkilenen bölgelerdeki 6., 7. ve 8. sınıf öğrencileri." },
+                    { title: "2. İçerik:", text: "Belirlenen yaş grubuna özel haftalık matematik dersleri düzenlenmiştir." },
+                    { title: "3. Yöntem:", text: "Eğitimler, tamamen gönüllü öğretmenler aracılığıyla ücretsiz online platformlar küçük gruplar halinde gerçekleştirilmiştir." },
+                    { title: "4. Süre:", text: "Mart 2023 - Haziran 2025 (2,5 yıl)." },
+                    { title: "5. Platform ve Araçlar:", text: "Zoom, WhatsApp grupları ve dijital materyal paylaşım araçları kullanılmıştır." },
+                    { title: "6. Ekip:", text: "Gönüllü matematik öğretmenleri, proje koordinatörleri ve teknik destekten oluşan 45+ kişilik bir ekip." }
                 ],
             },
+            impact: {
+                title: "Proje Süreci ve Etki",
+                paragraphs: [
+                    "Proje süresince öğrencilerin katılım ve devam oranları düzenli olarak takip edildi. Haftalık öğretmen gözlemleri doğrultusunda öğrenci ilerleme raporları hazırlandı.",
+                    "Proje, yalnızca akademik destek değil; psikolojik dayanıklılık, sosyal bağ kurma ve öğrenme motivasyonu alanlarında da güçlü bir etki yarattı.",
+                    "Gönüllü öğretmenler için de, kriz sonrası uzaktan eğitimde pedagojik dayanıklılık ve toplumsal etki yaratma açısından önemli bir öğrenme deneyimi sağladı."
+                ]
+            },
+            results: {
+                title: "Alınan Sonuçlar",
+                paragraphs: [
+                    "Proje, kısa vadeli bir yardım girişimi olmaktan çıkarak uzun soluklu bir dayanışma ve öğrenme ekosistemine dönüştü. Öğrencilerin yalnızca matematik başarısı değil; özgüven, disiplin ve aidiyet duyguları da güçlendi.",
+                    "Süreç boyunca toplanan veriler (öğrenci katılımı, öğretmen geri bildirimleri, oturum gözlemleri) akademik düzeyde analiz edilerek afet sonrası dijital öğrenme modellerine yönelik bir araştırma oluşturdu.",
+                    "Bu analizlerin sonucu olarak ortaya çıkan çalışma, “From Post-Disaster Support to Educational Equity: Conceptualizing a Volunteer-Driven Online Peer-to-Peer Learning Ecosystem at Scale” başlıklı akademik makaleye dönüştürüldü.",
+                    "Makale, gönüllülük temelli çevrimiçi akran eğitimi modellerinin sürdürülebilirliği, ölçeklenebilirliği ve eğitimde fırsat eşitliğine katkısı üzerine özgün bir kuramsal çerçeve sundu."
+                ]
+            },
+            achievements: {
+                title: "Uluslararası Başarı 🌍",
+                paragraphs: [
+                    "Projemiz bir araştırmaya dönüştü ve uluslararası ISD 2025 Konferansı (Information Systems Development)’nda En İyi Makale Ödülü’nde ikinci sırayı kazandı! 🏆",
+                    "Topluluk kurucumuz Öykü Kaplan, Belgrad’daki konferansta ödülünü alarak projemizin hikâyesini uluslararası akademiyle paylaştı.",
+                    "Makale, deprem sonrasında gönüllülük temelli başlatılan çevrimiçi akranlar arası öğrenme girişiminin; eğitimde eşitliği destekleyen sürdürülebilir ve ölçeklenebilir bir ekosisteme dönüşümünü kavramsallaştırıyor. Bu gelişmeyle birlikte projemiz, yalnızca yerelde değil, uluslararası ölçekte de ses getirmeye başladı. 🌟"
+                ]
+            },
+            gallery: [
+                { src: "/images/h-2.jpeg", alt: "Deprem Dayanışma Projesi (2023-2025) ders oturumu", caption: "" },
+                { src: "/images/h-3.jpeg", alt: "Deprem Dayanışma Projesi (2023-2025) gönüllü buluşması", caption: "" }
+            ],
+            finalMessage: {
+                title: "",
+                quote: "Eğitim bir ayrıcalık değil, bir dayanışma biçimidir.",
+                closing: "Deprem Dayanışma Projesi, afet sonrası eğitimde topluluk temelli dayanıklılığın, dijital gönüllülüğün ve akran destekli öğrenmenin gücünü ortaya koydu."
+            }
+        }
+    },
     {
         slug: "deprem-dayanisma-projesi-matematik",
         title: "Deprem Dayanışma Projesi (2025)",
@@ -309,53 +335,6 @@ export const projects: Project[] = [
                 quote: "“Gençlik Haritası: Hikâyeni Paylaş, İlham Ol.”",
                 closing: ""
             },
-        }
-    },
-            scope: {
-                title: "Projenin Kapsamı",
-                items: [
-                    { title: "1. Hedef Kitle:", text: "Depremden etkilenen bölgelerdeki 6., 7. ve 8. sınıf öğrencileri." },
-                    { title: "2. İçerik:", text: "Belirlenen yaş grubuna özel haftalık matematik dersleri düzenlenmiştir." },
-                    { title: "3. Yöntem:", text: "Eğitimler, tamamen gönüllü öğretmenler aracılığıyla ücretsiz online platformlar küçük gruplar halinde gerçekleştirilmiştir." },
-                    { title: "4. Süre:", text: "Mart 2023 - Haziran 2025 (2,5 yıl)." },
-                    { title: "5. Platform ve Araçlar:", text: "Zoom, WhatsApp grupları ve dijital materyal paylaşım araçları kullanılmıştır." },
-                    { title: "6. Ekip:", text: "Gönüllü matematik öğretmenleri, proje koordinatörleri ve teknik destekten oluşan 45+ kişilik bir ekip." }
-                ],
-            },
-            impact: {
-                title: "Proje Süreci ve Etki",
-                paragraphs: [
-                    "Proje süresince öğrencilerin katılım ve devam oranları düzenli olarak takip edildi. Haftalık öğretmen gözlemleri doğrultusunda öğrenci ilerleme raporları hazırlandı.",
-                    "Proje, yalnızca akademik destek değil; psikolojik dayanıklılık, sosyal bağ kurma ve öğrenme motivasyonu alanlarında da güçlü bir etki yarattı.",
-                    "Gönüllü öğretmenler için de, kriz sonrası uzaktan eğitimde pedagojik dayanıklılık ve toplumsal etki yaratma açısından önemli bir öğrenme deneyimi sağladı."
-                ]
-            },
-            results: {
-                title: "Alınan Sonuçlar",
-                paragraphs: [
-                    "Proje, kısa vadeli bir yardım girişimi olmaktan çıkarak uzun soluklu bir dayanışma ve öğrenme ekosistemine dönüştü. Öğrencilerin yalnızca matematik başarısı değil; özgüven, disiplin ve aidiyet duyguları da güçlendi.",
-                    "Süreç boyunca toplanan veriler (öğrenci katılımı, öğretmen geri bildirimleri, oturum gözlemleri) akademik düzeyde analiz edilerek afet sonrası dijital öğrenme modellerine yönelik bir araştırma oluşturdu.",
-                    "Bu analizlerin sonucu olarak ortaya çıkan çalışma, “From Post-Disaster Support to Educational Equity: Conceptualizing a Volunteer-Driven Online Peer-to-Peer Learning Ecosystem at Scale” başlıklı akademik makaleye dönüştürüldü.",
-                    "Makale, gönüllülük temelli çevrimiçi akran eğitimi modellerinin sürdürülebilirliği, ölçeklenebilirliği ve eğitimde fırsat eşitliğine katkısı üzerine özgün bir kuramsal çerçeve sundu."
-                ]
-            },
-            achievements: {
-                title: "Uluslararası Başarı 🌍",
-                paragraphs: [
-                    "Projemiz bir araştırmaya dönüştü ve uluslararası ISD 2025 Konferansı (Information Systems Development)’nda En İyi Makale Ödülü’nde ikinci sırayı kazandı! 🏆",
-                    "Topluluk kurucumuz Öykü Kaplan, Belgrad’daki konferansta ödülünü alarak projemizin hikâyesini uluslararası akademiyle paylaştı.",
-                    "Makale, deprem sonrasında gönüllülük temelli başlatılan çevrimiçi akranlar arası öğrenme girişiminin; eğitimde eşitliği destekleyen sürdürülebilir ve ölçeklenebilir bir ekosisteme dönüşümünü kavramsallaştırıyor. Bu gelişmeyle birlikte projemiz, yalnızca yerelde değil, uluslararası ölçekte de ses getirmeye başladı. 🌟"
-                ]
-            },
-            gallery: [
-                { src: "/images/h-2.jpeg", alt: "Deprem Dayanışma Projesi (2023-2025) ders oturumu", caption: "" },
-                { src: "/images/h-3.jpeg", alt: "Deprem Dayanışma Projesi (2023-2025) gönüllü buluşması", caption: "" }
-            ],
-            finalMessage: {
-                title: "",
-                quote: "Eğitim bir ayrıcalık değil, bir dayanışma biçimidir.",
-                closing: "Deprem Dayanışma Projesi, afet sonrası eğitimde topluluk temelli dayanıklılığın, dijital gönüllülüğün ve akran destekli öğrenmenin gücünü ortaya koydu."
-            }
         }
     },
     // --- YENİ EKLENEN PROJE ---
