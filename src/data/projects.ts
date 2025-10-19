@@ -178,62 +178,6 @@ export const projects: Project[] = [
         },
     },
     {
-        slug: "deprem-dayanisma-projesi-matematik",
-        title: "Deprem Dayanışma Projesi (2025)",
-        description: "Depremden etkilenen 6, 7 ve 8. sınıf öğrencilerine yönelik ücretsiz ve online matematik eğitimi projesi.",
-        imageUrl: "/images/h-9.jpeg",
-        detail: {
-            heroTitle: "Deprem Dayanışma Projesi (2025)",
-            heroSubtitle: "Ücretsiz ve Online Matematik Eğitimi",
-            heroImageUrl: "/images/h-9.jpeg",
-            categories: ["Eğitim", "Sosyal Dayanışma", "Afet Sonrası Destek"],
-            goal: {
-                title: "Projenin Amacı",
-                paragraphs: [
-                    "Depremin ardından eğitimde yaşanan kesintiler, binlerce öğrencinin geleceğini etkiledi. Hypatia Topluluğu olarak, bu zorlu dönemde gençlerin yanında olabilmek amacıyla yeniden Deprem Dayanışma Projesini başlattık.",
-                    "Bu projenin temel hedefi, depremden etkilenen 6., 7. ve 8. sınıf öğrencilerine ücretsiz ve online matematik eğitimi sunarak onların akademik, duygusal ve sosyal olarak güçlenmelerine destek olmaktır.",
-                    "Eğitim bir ayrıcalık değil, bir dayanışma biçimidir. Bu anlayışla hareket eden proje, yalnızca ders desteği değil; aynı zamanda öğrencilerin yeniden umut kurabildikleri bir öğrenme alanı oluşturur."
-                ],
-            },
-            scope: {
-                title: "Projenin Kapsamı",
-                items: [
-                    { title: "Hedef Kitle:", text: "Depremden etkilenen bölgelerde öğrenim gören 6., 7. ve 8. sınıf öğrencileri." },
-                    { title: "Yöntem:", text: "Eğitimler tamamen çevrimiçi platformlar (Zoom, Google Meet) üzerinden yürütülmektedir. Her öğrenci grubu, gönüllü matematik öğretmenleri tarafından haftalık derslerle desteklenmektedir." },
-                    { title: "Süre:", text: "Proje, Mart 2023’te başlatılmış; 2,5 yıl boyunca kesintisiz sürdürülmüş ve yüzlerce öğrencinin liseye geçişine eşlik etmiştir. 2025 itibarıyla yeni dönem başlamış olup, aynı modelle 120+ yeni öğrenciye ulaşılmıştır." },
-                    { title: "Kapsam ve İçerik:", text: "Matematik müfredatına uygun konu anlatımları, soru çözümleri, deneme sınavları ve mentorluk temelli öğrenme desteği sağlanmaktadır. Öğrenciler, yalnızca akademik olarak değil; özgüven, motivasyon ve aidiyet açısından da desteklenmektedir." }
-                ],
-            },
-            impact: {
-                title: "Proje Süreci",
-                paragraphs: [
-                    "1. Başlangıç (2023 Mart): Kriz sonrası hızlı müdahale modeliyle pilot program başlatıldı.",
-                    "2. Büyüme (2023–2024): 40’tan fazla gönüllü öğretmenle 300’ü aşkın öğrenciye ulaşıldı.",
-                    "3. Tamamlanma (2025 Haziran): İlk proje başarıyla tamamlanarak öğrenciler liseye uğurlandı.",
-                    "4. Yeniden Başlangıç (2025 Ekim): Yeni dönemde 120+ öğrenciyle program yeniden başlatıldı."
-                ],
-            },
-            results: {
-                title: "Beklenen Sonuçlar",
-                paragraphs: [
-                    "• Öğrencilerin matematik başarısında ve özgüveninde artış",
-                    "• Depremden etkilenen gençlerin eğitim sistemine yeniden entrasyonu",
-                    "• Gönüllü eğitim ekosistemiyle sürdürülebilir toplumsal dayanışma",
-                    "• Eğitimde fırsat eşitliğine katkı"
-                ],
-            },
-            gallery: [
-                { src: "/images/h-9.jpeg", alt: "Deprem Dayanışma Projesi (2025) öğrenci buluşması", caption: "" },
-                { src: "/images/h-10.jpeg", alt: "Deprem Dayanışma Projesi (2025) dayanışma anı", caption: "" }
-            ],
-            finalMessage: {
-                title: "",
-                quote: "Deprem Dayanışma Projesi, afet sonrası eğitimde dayanışma temelli bir öğrenme modeli sunarak yüzlerce gencin hayatına dokunmuştur. Bu proje, matematiği bir ders olmaktan çıkarıp umudu yeniden inşa etmenin dili hâline getirmiştir. Hypatia Topluluğu olarak, bu dayanışmayı sürdürmeye ve daha fazla öğrenciye ulaşmaya kararlıyız. Çünkü biliyoruz ki:",
-                closing: "Birlikte öğrenmek, birlikte iyileşmektir. 💜"
-            }
-        }
-    },
-    {
         slug: "deprem-mentorluk-programi",
         title: "Depremden Etkilenmiş Liseliler için Mentorluk Programı",
         description: "Depremden etkilenen lise öğrencilerinin akademik ve duygusal ihtiyaçlarını desteklemek için gönüllü mentorlarla eşleştirildiği, uzun soluklu bir gelişim programı.",
@@ -356,6 +300,62 @@ export const projects: Project[] = [
                 quote: "“Gençlik Haritası: Hikâyeni Paylaş, İlham Ol.”",
                 closing: ""
             },
+        }
+    },
+    {
+        slug: "deprem-dayanisma-projesi-matematik",
+        title: "Deprem Dayanışma Projesi (2025)",
+        description: "Depremden etkilenen 6, 7 ve 8. sınıf öğrencilerine yönelik ücretsiz ve online matematik eğitimi projesi.",
+        imageUrl: "/images/h-9.jpeg",
+        detail: {
+            heroTitle: "Deprem Dayanışma Projesi (2025)",
+            heroSubtitle: "Ücretsiz ve Online Matematik Eğitimi",
+            heroImageUrl: "/images/h-9.jpeg",
+            categories: ["Eğitim", "Sosyal Dayanışma", "Afet Sonrası Destek"],
+            goal: {
+                title: "Projenin Amacı",
+                paragraphs: [
+                    "Depremin ardından eğitimde yaşanan kesintiler, binlerce öğrencinin geleceğini etkiledi. Hypatia Topluluğu olarak, bu zorlu dönemde gençlerin yanında olabilmek amacıyla yeniden Deprem Dayanışma Projesini başlattık.",
+                    "Bu projenin temel hedefi, depremden etkilenen 6., 7. ve 8. sınıf öğrencilerine ücretsiz ve online matematik eğitimi sunarak onların akademik, duygusal ve sosyal olarak güçlenmelerine destek olmaktır.",
+                    "Eğitim bir ayrıcalık değil, bir dayanışma biçimidir. Bu anlayışla hareket eden proje, yalnızca ders desteği değil; aynı zamanda öğrencilerin yeniden umut kurabildikleri bir öğrenme alanı oluşturur."
+                ],
+            },
+            scope: {
+                title: "Projenin Kapsamı",
+                items: [
+                    { title: "Hedef Kitle:", text: "Depremden etkilenen bölgelerde öğrenim gören 6., 7. ve 8. sınıf öğrencileri." },
+                    { title: "Yöntem:", text: "Eğitimler tamamen çevrimiçi platformlar (Zoom, Google Meet) üzerinden yürütülmektedir. Her öğrenci grubu, gönüllü matematik öğretmenleri tarafından haftalık derslerle desteklenmektedir." },
+                    { title: "Süre:", text: "Proje, Mart 2023’te başlatılmış; 2,5 yıl boyunca kesintisiz sürdürülmüş ve yüzlerce öğrencinin liseye geçişine eşlik etmiştir. 2025 itibarıyla yeni dönem başlamış olup, aynı modelle 120+ yeni öğrenciye ulaşılmıştır." },
+                    { title: "Kapsam ve İçerik:", text: "Matematik müfredatına uygun konu anlatımları, soru çözümleri, deneme sınavları ve mentorluk temelli öğrenme desteği sağlanmaktadır. Öğrenciler, yalnızca akademik olarak değil; özgüven, motivasyon ve aidiyet açısından da desteklenmektedir." }
+                ],
+            },
+            impact: {
+                title: "Proje Süreci",
+                paragraphs: [
+                    "1. Başlangıç (2023 Mart): Kriz sonrası hızlı müdahale modeliyle pilot program başlatıldı.",
+                    "2. Büyüme (2023–2024): 40’tan fazla gönüllü öğretmenle 300’ü aşkın öğrenciye ulaşıldı.",
+                    "3. Tamamlanma (2025 Haziran): İlk proje başarıyla tamamlanarak öğrenciler liseye uğurlandı.",
+                    "4. Yeniden Başlangıç (2025 Ekim): Yeni dönemde 120+ öğrenciyle program yeniden başlatıldı."
+                ],
+            },
+            results: {
+                title: "Beklenen Sonuçlar",
+                paragraphs: [
+                    "• Öğrencilerin matematik başarısında ve özgüveninde artış",
+                    "• Depremden etkilenen gençlerin eğitim sistemine yeniden entrasyonu",
+                    "• Gönüllü eğitim ekosistemiyle sürdürülebilir toplumsal dayanışma",
+                    "• Eğitimde fırsat eşitliğine katkı"
+                ],
+            },
+            gallery: [
+                { src: "/images/h-9.jpeg", alt: "Deprem Dayanışma Projesi (2025) öğrenci buluşması", caption: "" },
+                { src: "/images/h-10.jpeg", alt: "Deprem Dayanışma Projesi (2025) dayanışma anı", caption: "" }
+            ],
+            finalMessage: {
+                title: "",
+                quote: "Deprem Dayanışma Projesi, afet sonrası eğitimde dayanışma temelli bir öğrenme modeli sunarak yüzlerce gencin hayatına dokunmuştur. Bu proje, matematiği bir ders olmaktan çıkarıp umudu yeniden inşa etmenin dili hâline getirmiştir. Hypatia Topluluğu olarak, bu dayanışmayı sürdürmeye ve daha fazla öğrenciye ulaşmaya kararlıyız. Çünkü biliyoruz ki:",
+                closing: "Birlikte öğrenmek, birlikte iyileşmektir. 💜"
+            }
         }
     },
     {
