@@ -34,7 +34,7 @@ export type Project = {
         };
         scope?: { // Opsiyonel bölüm
             title: string;
-            items: { title: string; text: string; }[];
+            items: { title: string; text?: string; points?: string[]; }[];
             supporters?: Supporter[];
         };
         impact: {
@@ -234,7 +234,14 @@ export const projects: Project[] = [
                 items: [
                     { title: "1. Hedef Kitle:", text: "18–30 yaş arası gençler, özellikle uluslararası deneyim kazanmak, gönüllülük yapmak veya Avrupa fırsatlarını değerlendirmek isteyenler." },
                     { title: "2. İçerik:", text: "Her bölümde yurtdışına çıkmış bir gencin hikâyesine yer veriliyor. Katılımcılar; Avrupa Dayanışma Programı (ESC), Erasmus+ projeleri, stajlar veya gönüllülük programları aracılığıyla yaşadıkları deneyimleri anlatıyor." },
-                    { title: "3. Yöntem:", text: "○ YouTube ve sosyal medya platformlarında yayınlanan kısa video röportajlar 🎥 ○ Katılımcıların kendi sesinden gerçek hikâyeler 💬 ○ Gençlerin karşılaştığı zorluklar, öğrendikleri dersler ve yeni başlayanlara tavsiyeler 🌱" },
+                    {
+                        title: "3. Yöntem:",
+                        points: [
+                            "YouTube ve sosyal medya platformlarında yayınlanan kısa video röportajlar 🎥",
+                            "Katılımcıların kendi sesinden gerçek hikâyeler ve ilham veren deneyimler 💬",
+                            "Gençlerin karşılaştığı zorluklardan öğrendikleri dersler ve yeni başlayanlara tavsiyeler 🌱"
+                        ],
+                    },
                     { title: "4. Yaygınlaştırma:", text: "Videolar Hypatia’nın dijital kanallarında paylaşılırken; her hikâye, gençlerin birbirine ilham olabileceği bir “deneyim haritası” oluşturuyor." },
                 ],
             },

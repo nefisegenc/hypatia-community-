@@ -84,7 +84,16 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                                 {detail.scope.items.map((item, i) => (
                                     <div key={i}>
                                         <h3 className="text-xl font-semibold text-hypatia-charcoal">{item.title}</h3>
-                                        <p className="mt-2 text-lg text-muted-foreground">{item.text}</p>
+                                        {item.text && (
+                                            <p className="mt-2 text-lg text-muted-foreground">{item.text}</p>
+                                        )}
+                                        {item.points && (
+                                            <ul className="mt-3 space-y-2 text-base text-muted-foreground list-disc list-inside">
+                                                {item.points.map((point, index) => (
+                                                    <li key={index}>{point}</li>
+                                                ))}
+                                            </ul>
+                                        )}
                                     </div>
                                 ))}
                                 {detail.scope.supporters && (
