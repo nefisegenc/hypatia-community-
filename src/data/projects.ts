@@ -144,7 +144,7 @@ export const projects: Project[] = [
                     "1. Başlangıç (2023 Mart): Kriz sonrası hızlı müdahale modeliyle pilot program başlatıldı.",
                     "2. Büyüme (2023–2024): 40’tan fazla gönüllü öğretmenle 300’ü aşkın öğrenciye ulaşıldı.",
                     "3. Tamamlanma (2025 Haziran): İlk proje başarıyla tamamlanarak öğrenciler liseye uğurlandı.",
-                    "4. Yeniden Başlangıç (2025 Eylül): Yeni dönemde 130+ öğrenciyle program yeniden başlatıldı."
+                    "4. Yeniden Başlangıç (2025 Ekim): Yeni dönemde 120+ öğrenciyle program yeniden başlatıldı."
                 ],
             },
             results: {
