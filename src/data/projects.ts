@@ -386,8 +386,8 @@ export const projects: Project[] = [
                 ]
             },
             results: {
-                title: "Beklenen Sonuçlar", // Bu bölümü "Gelecek Planı" yerine kullandım, daha uygun.
-                paragraphs: [] // Bu projede bu alan boş kalabilir veya gelecek planı buraya taşınabilir.
+                title: "",
+                paragraphs: []
             },
             finalMessage: {
                 title: "",
