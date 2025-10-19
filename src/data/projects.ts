@@ -84,7 +84,7 @@ export const projects: Project[] = [
                 ],
                 supporters: [
                     { name: "@kotexturkiye", url: "https://www.instagram.com/kotexturkiye", note: "Ped sponsorluğu ve farkındalık desteği" },
-                    { name: "@beije.co", url: "https://www.instagram.com/beije.co", note: "Ped sponsorluğu ve farkındalık desteği" },
+                    { name: "@beije.co", url: "https://beije.co/", note: "Ped sponsorluğu ve farkındalık desteği" },
                     { name: "@peddonofficial", url: "https://www.instagram.com/peddonofficial", note: "Etkinlik desteği ve katılımı" },
                 ],
             },
@@ -124,7 +124,7 @@ export const projects: Project[] = [
             goal: {
                 title: "Projenin Amacı",
                 paragraphs: [
-                    "Depremin ardından eğitimde yaşanan kesintiler, binlerce öğrencinin geleceğini etkiledi. Hypatia Topluluğu olarak, bu zorlu dönemde gençlerin yanında olabilmek amacıyla Deprem Dayanışma Projesini başlattık.",
+                    "Depremin ardından eğitimde yaşanan kesintiler, binlerce öğrencinin geleceğini etkiledi. Hypatia Topluluğu olarak, bu zorlu dönemde gençlerin yanında olabilmek amacıyla yeniden Deprem Dayanışma Projesini başlattık.",
                     "Bu projenin temel hedefi, depremden etkilenen 6., 7. ve 8. sınıf öğrencilerine ücretsiz ve online matematik eğitimi sunarak onların akademik, duygusal ve sosyal olarak güçlenmelerine destek olmaktır.",
                     "Eğitim bir ayrıcalık değil, bir dayanışma biçimidir. Bu anlayışla hareket eden proje, yalnızca ders desteği değil; aynı zamanda öğrencilerin yeniden umut kurabildikleri bir öğrenme alanı oluşturur."
                 ],
