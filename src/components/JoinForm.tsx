@@ -12,6 +12,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { db } from "@/lib/firebase";
 
 type SubmitState = "idle" | "loading" | "success" | "error";
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MAX_NAME_LENGTH = 120;
+const MAX_REASON_LENGTH = 1500;
+const HONEYPOT_FIELD = "website";
+const SUBMISSION_COOLDOWN_MS = 2 * 60 * 1000; // two minutes
 
 export function JoinForm() {
     const [status, setStatus] = useState<SubmitState>("idle");
@@ -32,16 +37,57 @@ export function JoinForm() {
         const email = String(formData.get("email") ?? "").trim();
         const reason = String(formData.get("reason") ?? "").trim();
 
+        const now = Date.now();
+        if (typeof window !== "undefined") {
+            const lastSubmission = window.localStorage.getItem("hypatia_join_last_submission");
+            if (lastSubmission) {
+                const elapsed = now - Number(lastSubmission);
+                if (!Number.isNaN(elapsed) && elapsed < SUBMISSION_COOLDOWN_MS) {
+                    const remaining = Math.ceil((SUBMISSION_COOLDOWN_MS - elapsed) / 1000);
+                    setErrorMessage(`Biraz yavaş :) ${remaining} saniye sonra tekrar deneyebilirsin.`);
+                    setStatus("error");
+                    return;
+                }
+            }
+        }
+
+        if (String(formData.get(HONEYPOT_FIELD) ?? "").trim().length > 0) {
+            // Bot submission attempt.
+            form.reset();
+            setStatus("idle");
+            return;
+        }
+
+        if (name.length === 0 || email.length === 0) {
+            setErrorMessage("Adını ve e-posta adresini doldurmalısın.");
+            setStatus("error");
+            return;
+        }
+
+        if (!EMAIL_REGEX.test(email)) {
+            setErrorMessage("Geçerli bir e-posta adresi gir.");
+            setStatus("error");
+            return;
+        }
+
         try {
+            const sanitizedReason =
+                reason.length > 0 ? reason.slice(0, MAX_REASON_LENGTH) : null;
+
             await addDoc(collection(db, "joinRequests"), {
-                name,
-                email,
-                reason,
+                name: name.slice(0, MAX_NAME_LENGTH),
+                email: email.toLowerCase(),
+                ...(sanitizedReason ? { reason: sanitizedReason } : {}),
                 createdAt: serverTimestamp(),
             });
 
+            if (typeof window !== "undefined") {
+                window.localStorage.setItem("hypatia_join_last_submission", String(now));
+            }
+
             setStatus("success");
             form.reset();
+            setTimeout(() => setStatus("idle"), 6000);
         } catch (error) {
             console.error("Join form submission failed", error);
             setErrorMessage("Başvurun gönderilirken bir hata oluştu. Lütfen tekrar dene.");
@@ -72,9 +118,18 @@ export function JoinForm() {
                         <Textarea
                             id="reason"
                             name="reason"
-                            placeholder="Kendinden, hedeflerinden ve topluluğa katabileceğin değerlerden bahset..."
-                            required
+                            placeholder="İstersen kendinden, hedeflerinden ve topluluğa katabileceğin değerlerden bahset..."
                             rows={4}
+                        />
+                    </div>
+                    <div className="sr-only" aria-hidden="true">
+                        <Label htmlFor={HONEYPOT_FIELD}>Web siten</Label>
+                        <Input
+                            id={HONEYPOT_FIELD}
+                            name={HONEYPOT_FIELD}
+                            type="text"
+                            autoComplete="off"
+                            tabIndex={-1}
                         />
                     </div>
                     {status === "success" && (
