@@ -363,11 +363,11 @@ export const projects: Project[] = [
         slug: "liseli-talks",
         title: "Liseli Talks",
         description: "Lise öğrencilerinin kendi sesleriyle ilham veren hikayelerini paylaştığı, askıya alınmış bir platform projesi.",
-        imageUrl: "/images/h-7.jpeg",
+        imageUrl: "/images/h-7.png",
         detail: {
             heroTitle: "Liseli Talks",
             heroSubtitle: "Gençlerin Sesi, Geleceğin Hikayesi",
-            heroImageUrl: "/images/h-7.jpeg",
+            heroImageUrl: "/images/h-7.png",
             categories: ["Gençlik", "Liderlik", "Topluluk", "İlham"],
             goal: {
                 title: "Projenin Vizyonu ve Amacı",
