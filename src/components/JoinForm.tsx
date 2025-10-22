@@ -19,6 +19,7 @@ export function JoinForm() {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        const form = e.currentTarget;
         if (status === "loading") {
             return;
         }
@@ -26,7 +27,7 @@ export function JoinForm() {
         setStatus("loading");
         setErrorMessage(null);
 
-        const formData = new FormData(e.currentTarget);
+        const formData = new FormData(form);
         const name = String(formData.get("name") ?? "").trim();
         const email = String(formData.get("email") ?? "").trim();
         const reason = String(formData.get("reason") ?? "").trim();
@@ -40,7 +41,7 @@ export function JoinForm() {
             });
 
             setStatus("success");
-            e.currentTarget.reset();
+            form.reset();
         } catch (error) {
             console.error("Join form submission failed", error);
             setErrorMessage("Başvurun gönderilirken bir hata oluştu. Lütfen tekrar dene.");
