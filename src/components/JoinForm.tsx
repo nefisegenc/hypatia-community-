@@ -1,22 +1,51 @@
+/* eslint-disable no-console */
 "use client";
+
+import { useState } from "react";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { db } from "@/lib/firebase";
+
+type SubmitState = "idle" | "loading" | "success" | "error";
 
 export function JoinForm() {
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const [status, setStatus] = useState<SubmitState>("idle");
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        if (status === "loading") {
+            return;
+        }
+
+        setStatus("loading");
+        setErrorMessage(null);
+
         const formData = new FormData(e.currentTarget);
-        console.log("Yeni Başvuru Alındı!", {
-            name: formData.get("name"),
-            email: formData.get("email"),
-            reason: formData.get("reason"),
-        });
-        alert("Başvurun alındı! 🎉");
-        e.currentTarget.reset();
+        const name = String(formData.get("name") ?? "").trim();
+        const email = String(formData.get("email") ?? "").trim();
+        const reason = String(formData.get("reason") ?? "").trim();
+
+        try {
+            await addDoc(collection(db, "joinRequests"), {
+                name,
+                email,
+                reason,
+                createdAt: serverTimestamp(),
+            });
+
+            setStatus("success");
+            e.currentTarget.reset();
+        } catch (error) {
+            console.error("Join form submission failed", error);
+            setErrorMessage("Başvurun gönderilirken bir hata oluştu. Lütfen tekrar dene.");
+            setStatus("error");
+        }
     };
 
     return (
@@ -47,11 +76,25 @@ export function JoinForm() {
                             rows={4}
                         />
                     </div>
+                    {status === "success" && (
+                        <p
+                            className="rounded-md bg-green-100 p-3 text-sm text-green-800"
+                            aria-live="polite"
+                        >
+                            Başvurun alındı! En kısa sürede seninle iletişime geçeceğiz. 🎉
+                        </p>
+                    )}
+                    {status === "error" && (
+                        <p className="rounded-md bg-red-100 p-3 text-sm text-red-800" aria-live="polite">
+                            {errorMessage}
+                        </p>
+                    )}
                     <Button
                         type="submit"
                         className="w-full bg-hypatia-pink hover:bg-pink-600 text-white font-bold text-lg py-6"
+                        disabled={status === "loading"}
                     >
-                        Başvurumu Gönder
+                        {status === "loading" ? "Gönderiliyor..." : "Başvurumu Gönder"}
                     </Button>
                 </form>
             </CardContent>
