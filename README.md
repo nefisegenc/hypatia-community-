@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hypatia Community
 
-## Getting Started
+Hypatia Community, genç ve dinamik bir topluluk platformudur. Proje yönetimi, ekip işbirliği ve sosyal etkinlikleri merkezi bir web arayüzü üzerinden sunmaktadır.
 
-First, run the development server:
+## 🌟 Özellikler
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Anasayfa**: Topluluk hakkında bilgi ve öne çıkan projeler
+- **Projeler**: Detaylı proje sayfaları, hedefler, etki ve destekçiler hakkında bilgi
+- **Hakkımızda**: Hypatia Community'nin misyonu, vizyonu ve değerleri
+- **Ekip**: Topluluk üyeleri hakkında bilgi
+- **Katılım Formu**: Yeni üyelerin topluluğa katılması için form
+- **Blog**: Etkinlik ve başarı hikayeleri paylaşımı
+
+## 🛠 Teknolojiler
+
+- **Framework**: [Next.js 15.4.2](https://nextjs.org/) (App Router)
+- **React**: 19.1.0
+- **Styling**: Tailwind CSS 3.4.18 + tailwindcss-animate
+- **UI Components**: Radix UI (Dialog, Navigation, Avatar, Label)
+- **Icons**: Lucide React
+- **Backend**: Firebase (Firestore, Cloud Functions)
+- **Email**: Nodemailer
+- **Form Validation**: Built-in React hooks
+- **TypeScript**: Type-safe development
+
+## 📁 Proje Yapısı
+
+```
+src/
+├── app/
+│   ├── page.tsx              # Anasayfa
+│   ├── layout.tsx            # Root layout
+│   ├── globals.css           # Global stiller
+│   ├── about/                # Hakkımızda sayfası
+│   ├── blog/                 # Blog sayfası
+│   ├── join/                 # Katılım formu
+│   └── projects/
+│       ├── page.tsx          # Projeler listesi
+│       └── [slug]/page.tsx   # Proje detay sayfası
+├── components/
+│   ├── BlogPostCard.tsx
+│   ├── JoinForm.tsx          # Katılım formu bileşeni
+│   ├── ProjectCard.tsx       # Proje kartı bileşeni
+│   ├── layout/
+│   │   ├── Header.tsx
+│   │   └── Footer.tsx
+│   ├── projects/
+│   │   └── ProjectGallery.tsx
+│   └── ui/                   # Radix UI bileşenleri
+├── config/
+│   └── navigation.ts         # Navigasyon linkleri
+├── data/
+│   └── projects.ts           # Proje veri tanımlamaları
+└── lib/
+    ├── firebase.ts           # Firebase konfigürasyonu
+    └── utils.ts              # Utility fonksiyonları
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Geliştirme
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Geliştirme sunucusunu başlatmak için:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+Sunucu [http://localhost:3000](http://localhost:3000) adresinde çalışır.
 
-To learn more about Next.js, take a look at the following resources:
+## 📜 Komutlar
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev` - Geliştirme sunucusu (Turbopack)
+- `npm run build` - Üretim derlemesi
+- `npm start` - Üretim sunucusu
+- `npm run lint` - Kod kalitesi kontrol
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔧 Backend
 
-## Deploy on Vercel
+- **Firebase Firestore**: Veri tabanı ve güvenlik kuralları
+- **Cloud Functions**: Email ve form işlemleri
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Stil ve Tasarım
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Tailwind CSS**: Responsive tasarım ve kustom utility classes
+- **Animasyonlar**: `tailwindcss-animate` ve `tw-animate-css` ile akıcı geçişler
+- **Responsive**: Mobile-first approach ile tüm cihazlarda uyumlu
+
+## 🤝 Katılım
+
+Hypatia Community'ye katılmak isterseniz:
+
+1. [Katılım Formu](/join) aracılığıyla başvuru yapın
+2. Sosyal medya hesaplarımızdan bizi takip edin
+3. Etkinliklere ve projelerimize katılın
+
+## 📄 Lisans
+
+Bu proje MIT Lisansı altında lisanslanmıştır.
+
+## 🙏 Destekçiler
+
+Hypatia Community'nin başarısına katkıda bulunan tüm destekçilere ve ekip üyelerine teşekkür ederiz.
