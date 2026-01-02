@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ProjectCard } from "@/components/ProjectCard";
-import { useState } from "react";
-import { Heart, BookOpen, Users, Venus, Linkedin, Instagram } from "lucide-react";
+import { useRef, useState } from "react";
+import { Heart, BookOpen, Users, Venus, Linkedin, Instagram, ChevronLeft, ChevronRight } from "lucide-react";
 import {
 	Dialog,
 	DialogContent,
@@ -116,6 +116,19 @@ export default function HomePage() {
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
 	const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + sliderImages.length) % sliderImages.length);
+	const projectsScrollerRef = useRef<HTMLDivElement | null>(null);
+
+	const scrollProjects = (direction: "left" | "right") => {
+		const container = projectsScrollerRef.current;
+		if (!container) {
+			return;
+		}
+		const scrollAmount = Math.round(container.clientWidth * 0.8);
+		container.scrollBy({
+			left: direction === "left" ? -scrollAmount : scrollAmount,
+			behavior: "smooth",
+		});
+	};
 
 	return (
 		<>
@@ -167,12 +180,12 @@ export default function HomePage() {
 						</div>
 
 						{/* Sağ (TEK GÖRSEL) */}
-						<div className="w-full max-w-md sm:max-w-lg lg:max-w-2xl mx-auto mt-8 lg:mt-0">
+						<div className="w-full max-w-2xl sm:max-w-3xl lg:max-w-none lg:w-[48vw] mx-auto mt-8 lg:mt-0">
 							<Image
 								src={heroImageSrc}
 								alt="Hypatia Community ekibiyle buluşma"
-								width={500}
-								height={400}
+								width={980}
+								height={780}
 								className="w-full h-auto"
 							/>
 						</div>
@@ -277,18 +290,39 @@ export default function HomePage() {
 						<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-hypatia-charcoal mb-12">
 							Projelerimiz
 						</h2>
-						{/* no-scrollbar sınıfı globals.css'te tanımlanmalıdır */}
-						<div className="flex overflow-x-auto space-x-8 pb-4 pl-4 sm:pl-6 lg:pl-8 no-scrollbar -mx-4 sm:-mx-6 lg:-mx-8">
-							{projects.map((p) => (
-								<div key={p.slug} className="flex-shrink-0 w-[85vw] sm:w-96">
-									<ProjectCard
-										slug={p.slug}
-										title={p.detail.heroTitle}
-										description={p.detail.heroSubtitle || p.description}
-										imageUrl={p.imageUrl}
-									/>
-								</div>
-							))}
+						<div className="relative">
+							<button
+								type="button"
+								onClick={() => scrollProjects("left")}
+								className="absolute left-2 top-1/2 z-10 hidden -translate-y-1/2 rounded-full border border-white/70 bg-white/90 p-2 text-hypatia-charcoal shadow-md transition hover:bg-white sm:flex"
+								aria-label="Önceki projeler"
+							>
+								<ChevronLeft className="h-5 w-5" />
+							</button>
+							<button
+								type="button"
+								onClick={() => scrollProjects("right")}
+								className="absolute right-2 top-1/2 z-10 hidden -translate-y-1/2 rounded-full border border-white/70 bg-white/90 p-2 text-hypatia-charcoal shadow-md transition hover:bg-white sm:flex"
+								aria-label="Sonraki projeler"
+							>
+								<ChevronRight className="h-5 w-5" />
+							</button>
+							{/* no-scrollbar sınıfı globals.css'te tanımlanmalıdır */}
+							<div
+								ref={projectsScrollerRef}
+								className="flex overflow-x-auto space-x-8 pb-4 pl-4 sm:pl-6 lg:pl-8 no-scrollbar -mx-4 sm:-mx-6 lg:-mx-8"
+							>
+								{projects.map((p) => (
+									<div key={p.slug} className="flex-shrink-0 w-[85vw] sm:w-96">
+										<ProjectCard
+											slug={p.slug}
+											title={p.detail.heroTitle}
+											description={p.detail.heroSubtitle || p.description}
+											imageUrl={p.imageUrl}
+										/>
+									</div>
+								))}
+							</div>
 						</div>
 					</div>
 				</div>

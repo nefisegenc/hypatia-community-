@@ -4,7 +4,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Linkedin, Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { footerNavLinks } from "@/config/navigation"; // socialLinks import'u artık gerekli değil
 
@@ -82,6 +82,17 @@ export const Footer = () => {
                                 >
                                     <Instagram className="h-4 w-4 text-hypatia-magenta" />
                                     Instagram
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="https://www.youtube.com/@hypatiaateam"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 text-hypatia-charcoal transition hover:text-hypatia-magenta"
+                                >
+                                    <Youtube className="h-4 w-4 text-hypatia-magenta" />
+                                    YouTube
                                 </Link>
                             </li>
                         </ul>
