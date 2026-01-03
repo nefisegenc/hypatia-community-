@@ -6,7 +6,7 @@ import { Link } from "@/i18n/routing"; // Use localized link
 import { Button } from "@/components/ui/button";
 import { ProjectCard } from "@/components/ProjectCard";
 import { useRef } from "react";
-import { Heart, BookOpen, Users, Venus, Linkedin, Instagram, ChevronLeft, ChevronRight } from "lucide-react";
+import { Heart, BookOpen, Venus, Linkedin, Instagram, ChevronLeft, ChevronRight } from "lucide-react";
 import {
 	Dialog,
 	DialogContent,

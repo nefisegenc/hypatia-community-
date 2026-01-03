@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
 
-import type { Project } from "@/data/projects";
+import type { Project } from "@/data";
 
 type GalleryImage = NonNullable<Project["detail"]["gallery"]>[number];
 
