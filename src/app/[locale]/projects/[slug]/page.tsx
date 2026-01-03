@@ -1,26 +1,40 @@
+
 // src/app/projects/[slug]/page.tsx
 
-import { projects } from "@/data/projects";
-import Link from "next/link";
+import { getProject, getProjects } from "@/data";
+import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
 import { ProjectGallery } from "@/components/projects/ProjectGallery";
 
 export async function generateStaticParams() {
-    return projects.map((project) => ({
-        slug: project.slug,
-    }));
+    const locales = ['tr', 'en'];
+    const paths = [];
+
+    for (const locale of locales) {
+        const projects = getProjects(locale);
+        for (const project of projects) {
+            paths.push({ slug: project.slug, locale });
+        }
+    }
+    return paths;
 }
 
 type ProjectDetailPageProps = {
-    params: Promise<{ slug: string }>;
+    params: Promise<{ slug: string; locale: string }>;
 };
 
 export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
-    const { slug } = await params;
-    const project = projects.find((p) => p.slug === slug);
+    const { slug, locale } = await params;
+
+    // Enable static rendering if needed
+    // setRequestLocale(locale); 
+
+    const t = await getTranslations("ProjectDetail");
+    const project = getProject(slug, locale);
 
     if (!project) {
         notFound();
@@ -49,7 +63,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 <div className="container relative z-10 mx-auto flex flex-col items-center px-4">
                     <Link href="/#projects" className="group mb-6 inline-flex items-center gap-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
                         <ArrowLeft size={16} className="transition-transform group-hover:-translate-x-1" />
-                        Tüm Projelere Dön
+                        {t("backToProjects")}
                     </Link>
 
                     <h1 className="text-4xl font-bold leading-tight text-[hsl(var(--hypatia-soft-pink))] sm:text-5xl md:text-6xl lg:text-7xl">
@@ -105,7 +119,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                                 ))}
                                 {detail.scope.supporters && (
                                     <div>
-                                        <h3 className="text-xl font-semibold text-hypatia-charcoal mt-6">Destekçiler:</h3>
+                                        <h3 className="text-xl font-semibold text-hypatia-charcoal mt-6">{t("supporters")}:</h3>
                                         <ul className="mt-3 space-y-2 text-lg text-muted-foreground">
                                             {detail.scope.supporters.map((sup, i) => (
                                                 <li key={i} className="flex items-start gap-3">

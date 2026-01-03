@@ -1,0 +1,187 @@
+{
+    "HomePage": {
+        "hero": {
+            "title": "Birlikte Başarıyor,",
+            "highlight": "Birlikte Büyüyoruz!",
+            "description": "Kaliteli ve erişilebilir eğitimi desteklemek, toplumsal cinsiyet eşitliğini sağlamak ve gençler ile kadınların güçlenmesi için sosyal fayda odaklı projeler üretiyoruz.",
+            "projectsButton": "Projelerimizi İncele",
+            "joinButton": "Aramıza Katıl",
+            "joinTitle": "Topluluğumuza Katıl"
+        },
+        "weAre": {
+            "title": "Biz Kimiz?",
+            "subtitle": "Eğitime, eşitliğe ve toplumsal faydaya inanan; birlikte üreten ve birlikte büyüyen bir ekibiz."
+        },
+        "mission": {
+            "title": "Misyonumuz",
+            "description": "Hypatia, toplumsal cinsiyet eşitliğini savunmak, kaliteli ve erişilebilir eğitimi yaygınlaştırmak ve gençlerle kadınların öncülüğünde gerçek etki yaratan sosyal sorumluluk projeleri geliştiren bir topluluktur. Yerelden küresele uzanan bir dayanışma ağı kurarak, bireylerin sadece katılımcı değil, aynı zamanda değişimin aktif öznesi olmasını sağlıyoruz."
+        },
+        "vision": {
+            "title": "Vizyonumuz",
+            "description": "Hypatia, geleceği şekillendiren gençlerin ve kadınların liderlik ettiği küresel bir hareket olmayı hedefler. Eğitimin erişilebilir olduğu, eşitliğin norm haline geldiği ve kolektif gücün sürdürülebilir bir dünyayı mümkün kıldığı bir gelecek inşa etmektir. Bu vizyonla, gelecek nesilleri güçlendirmeye ve daha kapsayıcı, adil ve umut dolu bir toplumsal dönüşüme öncülük etmeye devam edeceğiz."
+        },
+        "values": {
+            "title": "Değerlerimiz",
+            "empowerment": {
+                "title": "Kadınları ve Gençleri Güçlendirmek",
+                "description": "Gençler ve kadınlar hayaller kurar, harekete geçer ve ilham verir."
+            },
+            "education": {
+                "title": "Kaliteli ve Erişilebilir Eğitim",
+                "description": "Her çocuk, güven veren ve umut taşıyan bir eğitimle güçlenmelidir."
+            },
+            "equality": {
+                "title": "Toplumsal Cinsiyet Eşitliği",
+                "description": "Cinsiyet, sesimizi kısmak için değil; çeşitliliğimizi kutlamak içindir."
+            }
+        },
+        "projects": {
+            "title": "Projelerimiz"
+        },
+        "team": {
+            "title": "Ekibimiz",
+            "subtitle": "Ekibimiz ile tanışın.",
+            "roles": {
+                "founder": "Kurucu",
+                "developer": "Yazılım Geliştiricisi",
+                "designer": "Tasarımcı",
+                "projectManager": "Proje Yöneticisi"
+            }
+        }
+    },
+    "AboutPage": {
+        "title": "Biz Kimiz?",
+        "description": "Teknolojiye yön veren, birlikte üreten ve geleceği şekillendiren genç ve dinamik bir topluluğuz.",
+        "mission": {
+            "title": "Misyonumuz",
+            "p1": "Hypatia olarak misyonumuz, teknolojiye ve tasarıma ilgi duyan her genci bir araya getirerek potansiyellerini en üst seviyeye çıkarmaktır. Proje bazlı öğrenme metodolojisiyle, üyelerimize gerçek dünya problemlerini çözme ve portfolyolarını zenginleştirme imkanı sunuyoruz.",
+            "p2": "Farklı disiplinlerden gelen üyelerimizin işbirliği içinde çalışmasını teşvik ederek, hem teknik becerilerini hem de takım çalışması yetkinliklerini geliştirmelerine olanak tanıyoruz."
+        },
+        "values": {
+            "title": "Değerlerimiz",
+            "subtitle": "Bizi biz yapan temel ilkeler.",
+            "innovation": {
+                "title": "İnovasyon ve Yaratıcılık",
+                "description": "Sınırları zorlayan, yeni ve özgün fikirlerin peşinden giden bir merakı teşvik ediyoruz."
+            },
+            "collaboration": {
+                "title": "İşbirliği ve Topluluk",
+                "description": "Başarının, farklı yeteneklerin bir araya geldiği, destekleyici bir ortamda yeşerdiğine inanıyoruz."
+            },
+            "learning": {
+                "title": "Sürekli Öğrenme",
+                "description": "Teknolojinin hızına ayak uyduruyor, her projeyi kendimizi geliştirmek için bir fırsat olarak görüyoruz."
+            }
+        },
+        "cta": {
+            "title": "Aramıza Katılmaya Hazır Mısın?",
+            "description": "Senin gibi tutkulu insanlarla birlikte harika projeler geliştirmek için sabırsızlanıyoruz.",
+            "button": "Hemen Başvur"
+        }
+    },
+    "ProjectsPage": {
+        "title": "Tüm Projeler",
+        "description": "Topluluğumuz tarafından hayata geçirilen projelerin tam listesi."
+    },
+    "ProjectDetail": {
+        "backToProjects": "Tüm Projelere Dön",
+        "supporters": "Destekçiler"
+    },
+    "Footer": {
+        "description": "Kaliteli ve erişilebilir eğitimi desteklemek, toplumsal cinsiyet eşitliğini sağlamak ve gençler ile kadınların güçlenmesi için sosyal fayda odaklı projeler üretiyoruz.",
+        "joinButton": "Topluluğa Katıl",
+        "pages": "Sayfalar",
+        "contact": "İletişim",
+        "copyright": "© 2023 Hypatia Topluluğu Tüm hakları saklıdır.",
+        "privacy": "Gizlilik Politikası",
+        "terms": "Kullanım Şartları",
+        "contactUs": "Bize Yazın"
+    },
+    "Navigation": {
+        "home": "Anasayfa",
+        "about": "Hakkımızda",
+        "projects": "Projeler",
+        "team": "Ekibimiz",
+        "join": "Katıl",
+        "language": "Dil"
+    },
+    "JoinForm": {
+        "title": "Topluluğumuza Katıl",
+        "description": "Aşağıdaki formu doldurarak Hypatia'nın bir parçası olmak için ilk adımı at.",
+        "nameLabel": "Adın Soyadın",
+        "namePlaceholder": "Örn: Ada Lovelace",
+        "emailLabel": "E-posta Adresin",
+        "emailPlaceholder": "ada@example.com",
+        "reasonLabel": "Neden katılmak istiyorsun?",
+        "reasonPlaceholder": "İstersen kendinden, hedeflerinden ve topluluğa katabileceğin değerlerden bahset...",
+        "submitButton": "Başvurumu Gönder",
+        "submitting": "Gönderiliyor...",
+        "successMessage": "Başvurun alındı! En kısa sürede seninle iletişime geçeceğiz. 🎉",
+        "errorMessage": "Başvurun gönderilirken bir hata oluştu. Lütfen tekrar dene.",
+        "validation": {
+            "required": "Adını ve e-posta adresini doldurmalısın.",
+            "invalidEmail": "Geçerli bir e-posta adresi gir.",
+            "cooldown": "Biraz yavaş :) {seconds} saniye sonra tekrar deneyebilirsin."
+        }
+    },
+    "PrivacyPolicy": {
+        "title": "Gizlilik Politikası",
+        "intro": "Hypatia Topluluğu olarak gizliliğinize önem veriyoruz. Bu metin, web sitemizi kullanırken hangi verileri topladığımızı, nasıl kullandığımızı ve haklarınızı özetler.",
+        "sections": {
+            "dataCollection": {
+                "title": "Toplanan Veriler",
+                "content": "İletişim formları, başvuru formları veya e-posta üzerinden bize ilettiğiniz ad, soyad, e-posta adresi, okul/şehir gibi bilgileri toplayabiliriz. Ayrıca siteyi kullanımınıza ilişkin teknik veriler (cihaz, tarayıcı, IP gibi) sınırlı ölçüde işlenebilir."
+            },
+            "usage": {
+                "title": "Verilerin Kullanımı",
+                "content": "Verileri; başvuruları değerlendirmek, geri dönüş sağlamak, topluluk duyurularını iletmek ve hizmet kalitesini iyileştirmek amacıyla kullanırız."
+            },
+            "sharing": {
+                "title": "Veri Paylaşımı",
+                "content": "Kişisel verilerinizi üçüncü taraflarla pazarlama amacıyla paylaşmayız. Yasal yükümlülükler veya hizmeti sunmak için zorunlu teknik sağlayıcılar dışında paylaşım yapılmaz."
+            },
+            "retention": {
+                "title": "Saklama Süresi",
+                "content": "Veriler, işleme amacının gerektirdiği süre boyunca saklanır ve ilgili yasal düzenlemelere uygun şekilde silinir."
+            },
+            "rights": {
+                "title": "Haklarınız",
+                "content": "Kişisel verilerinize ilişkin erişim, düzeltme, silme ve itiraz haklarınızı kullanmak için bizimle iletişime geçebilirsiniz."
+            },
+            "contact": {
+                "title": "İletişim",
+                "content": "Sorularınız için bizimle iletişime geçebilirsiniz."
+            }
+        }
+    },
+    "Terms": {
+        "title": "Kullanım Şartları",
+        "intro": "Bu web sitesini kullanarak aşağıdaki şartları kabul etmiş sayılırsınız. Şartları kabul etmiyorsanız lütfen siteyi kullanmayın.",
+        "sections": {
+            "scope": {
+                "title": "Hizmetin Kapsamı",
+                "content": "Hypatia Topluluğu, topluluk etkinlikleri ve projeleri hakkında bilgi sunar. İçerikler bilgilendirme amaçlıdır ve önceden haber vermeksizin değiştirilebilir."
+            },
+            "responsibility": {
+                "title": "Kullanıcı Sorumlulukları",
+                "content": "Siteyi yürürlükteki mevzuata uygun kullanmayı, yanıltıcı veya zarar verici içerikler paylaşmamayı kabul edersiniz."
+            },
+            "intellectualProperty": {
+                "title": "Fikri Mülkiyet",
+                "content": "Site içeriği, metinler ve görseller Hypatia Topluluğu’na aittir veya izinli olarak kullanılmaktadır. Yazılı izin olmadan çoğaltılamaz."
+            },
+            "limitation": {
+                "title": "Sorumluluğun Sınırlandırılması",
+                "content": "Site içeriğinin doğruluğu için makul çaba gösterilir; ancak içeriklerin eksiksiz veya hatasız olduğu garanti edilmez."
+            },
+            "changes": {
+                "title": "Değişiklikler",
+                "content": "Bu şartlar zaman zaman güncellenebilir. Güncellemeler bu sayfada yayınlandığı anda yürürlüğe girer."
+            },
+            "contact": {
+                "title": "İletişim",
+                "content": "Sorularınız için bizimle iletişime geçebilirsiniz."
+            }
+        }
+    }
+}

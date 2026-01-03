@@ -1,23 +1,23 @@
-
 // src/components/layout/Footer.tsx
 
 "use client";
 
-import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { Instagram, Linkedin, Mail, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export const Footer = () => {
     const t = useTranslations("Footer");
+    const tNav = useTranslations("Navigation");
 
     const footerNavLinks = [
-        { href: "/", label: useTranslations("Navigation")("home") },
-        { href: "/#about", label: useTranslations("Navigation")("about") },
-        { href: "/#projects", label: useTranslations("Navigation")("projects") },
-        { href: "/#team", label: useTranslations("HomePage.team")("title") },
-        { href: "/join", label: useTranslations("Navigation")("join") },
+        { href: "/", label: tNav("home") },
+        { href: "/#about", label: tNav("about") },
+        { href: "/#projects", label: tNav("projects") },
+        { href: "/#team", label: tNav("team") },
+        { href: "/join", label: tNav("join") },
     ];
 
     return (
@@ -28,7 +28,7 @@ export const Footer = () => {
                         <Link href="/" className="inline-flex">
                             <Image
                                 src="/images/hypatia 1 (1).svg"
-                                alt="Hypatia Community"
+                                alt="Hypatia Community logosu"
                                 width={48}
                                 height={48}
                                 className="h-12 w-auto"
@@ -42,7 +42,7 @@ export const Footer = () => {
                             size="lg"
                             className="border-2 border-hypatia-magenta bg-hypatia-magenta text-white hover:bg-hypatia-magenta/90 hover:border-hypatia-magenta/90 transition-colors duration-300"
                         >
-                            <Link href="/join">{t("joinButton")}</Link>
+                            <Link href="/join">{t("joinCommunity")}</Link>
                         </Button>
                     </div>
 
@@ -70,7 +70,7 @@ export const Footer = () => {
                                     className="flex items-center gap-2 text-hypatia-charcoal transition hover:text-hypatia-magenta"
                                 >
                                     <Mail className="h-4 w-4 text-hypatia-magenta" />
-                                    Mail
+                                    {t("mail")}
                                 </Link>
                             </li>
                             <li>
@@ -113,7 +113,7 @@ export const Footer = () => {
                 <div className="mt-12 flex flex-col gap-4 border-t border-hypatia-blue/15 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
                     <p>{t("copyright")}</p>
                     <div className="flex flex-wrap items-center gap-4">
-                        <Link href="/privacy-policy" className="transition hover:text-hypatia-magenta">{t("privacy")}</Link>
+                        <Link href="/privacy-policy" className="transition hover:text-hypatia-magenta">{t("privacyPolicy")}</Link>
                         <Link href="/terms" className="transition hover:text-hypatia-magenta">{t("terms")}</Link>
                         <Link href="mailto:hypatiaateam@gmail.com" className="transition hover:text-hypatia-magenta">{t("contactUs")}</Link>
                     </div>

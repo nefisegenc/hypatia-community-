@@ -1,10 +1,8 @@
-
 // src/components/layout/Header.tsx
 
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
@@ -22,14 +20,17 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet";
 import { JoinForm } from "@/components/JoinForm";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { LanguageSwitcher } from "../LanguageSwitcher";
+import { Link } from "@/i18n/routing";
 
 export const Header: React.FC = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const t = useTranslations("Navigation");
+    const tJoin = useTranslations("JoinForm");
+    const tFooter = useTranslations("Footer");
 
     useEffect(() => {
         const handleScroll = () => {
@@ -72,7 +73,7 @@ export const Header: React.FC = () => {
                 <Link href="/" className="inline-flex">
                     <Image
                         src="/images/hypatia 1 (1).svg"
-                        alt="Hypatia Community"
+                        alt="Hypatia Community logosu"
                         width={48}
                         height={48}
                         priority
@@ -98,20 +99,20 @@ export const Header: React.FC = () => {
                         </DialogTrigger>
                         <DialogContent>
                             <DialogHeader>
-                                <DialogTitle className="sr-only">{t("join")}</DialogTitle>
+                                <DialogTitle className="sr-only">{tJoin("title")}</DialogTitle>
                             </DialogHeader>
                             <JoinForm />
                         </DialogContent>
                     </Dialog>
                 </div>
 
-                <div className="flex lg:hidden items-center gap-4">
+                <div className="flex lg:hidden items-center gap-2">
                     <LanguageSwitcher />
                     <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
                         <SheetTrigger asChild>
                             <Button variant="ghost" size="icon" className="rounded-full border border-hypatia-magenta/25 bg-white/70 shadow-sm shadow-hypatia-magenta/15">
                                 <Menu className="h-6 w-6 text-hypatia-magenta" />
-                                <span className="sr-only">Menu</span>
+                                <span className="sr-only">{t("openMenu")}</span>
                             </Button>
                         </SheetTrigger>
                         <SheetContent side="right" className="w-full max-w-xs border-l border-hypatia-blue/10 bg-white/95 backdrop-blur-xl">
@@ -131,20 +132,20 @@ export const Header: React.FC = () => {
                                 ))}
                             </nav>
                             <div className="mt-8 space-y-3 rounded-2xl border border-hypatia-magenta/15 bg-gradient-to-br from-white via-white to-hypatia-blue/10 p-5 shadow-inner shadow-hypatia-magenta/10">
-                                <p className="text-sm font-semibold text-hypatia-charcoal">Hypatia Network</p>
+                                <p className="text-sm font-semibold text-hypatia-charcoal">{tFooter("networkTitle")}</p>
                                 <p className="text-sm text-muted-foreground">
-                                    Türkiye genelindeki genç liderlerle tanış, projelerimizde yer al ve sosyal etki yarat.
+                                    {tFooter("networkDescription")}
                                 </p>
                                 <Dialog>
                                     <DialogTrigger asChild>
                                         <Button className="group relative w-full overflow-hidden rounded-full bg-gradient-to-r from-hypatia-blue via-hypatia-magenta to-hypatia-blue px-6 py-2.5 text-base font-semibold text-white shadow-lg shadow-hypatia-magenta/25 transition-all duration-300 hover:scale-105">
                                             <span className="absolute inset-0 -z-10 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-20" />
-                                            {t("join")}
+                                            {tJoin("joinForm")}
                                         </Button>
                                     </DialogTrigger>
                                     <DialogContent>
                                         <DialogHeader>
-                                            <DialogTitle className="sr-only">{t("join")}</DialogTitle>
+                                            <DialogTitle className="sr-only">{tJoin("title")}</DialogTitle>
                                         </DialogHeader>
                                         <JoinForm />
                                     </DialogContent>

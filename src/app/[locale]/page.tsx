@@ -1,10 +1,11 @@
+
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing"; // Use localized link
 import { Button } from "@/components/ui/button";
 import { ProjectCard } from "@/components/ProjectCard";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Heart, BookOpen, Users, Venus, Linkedin, Instagram, ChevronLeft, ChevronRight } from "lucide-react";
 import {
 	Dialog,
@@ -14,109 +15,77 @@ import {
 	DialogTrigger,
 } from "@/components/ui/dialog";
 import { JoinForm } from "@/components/JoinForm";
-import { projects } from "@/data/projects";
+import { getProjects } from "@/data";
+import { useTranslations, useLocale } from "next-intl";
 
 // Hero bölümünde kullanılacak görselin kaynağı
 const heroImageSrc = "/images/h-1-1.png";
 
-// Bu dizi ve ilgili state/fonksiyonlar, Hero'da slider kaldırıldığı için artık kullanılmayacak.
-// Ancak eğer başka bir yerde slider mantığı kullanıyorsan kalsın, yoksa silebilirsin.
-const sliderImages = [
-	{
-		id: 1,
-		src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1974&auto-format=fit=crop",
-		alt: "Hypatia Community Ekibi",
-		title: "Topluluk Buluşması",
-		description: "Birlikte öğreniyor, üretiyoruz",
-	},
-	{
-		id: 2,
-		src: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto-format=fit=crop",
-		alt: "Teknoloji Atölyesi",
-		title: "Teknoloji Atölyesi",
-		description: "Yeni teknolojileri keşfediyoruz",
-	},
-	{
-		id: 3,
-		src: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=1778&auto-format=fit=crop",
-		alt: "Proje Sunumu",
-		title: "Proje Sunumu",
-		description: "Fikirlerimizi paylaşıyoruz",
-	},
-	{
-		id: 4,
-		src: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=1974&auto-format=fit=crop",
-		alt: "Yaratıcılık Atölyesi",
-		title: "Yaratıcılık Atölyesi",
-		description: "Hayal gücümüzü geliştiriyoruz",
-	},
-];
-
 const teamMembers = [
 	{
 		name: "Öykü Kaplan",
-		role: "Kurucu",
+		roleKey: "founder",
 		linkedinUrl: "https://www.linkedin.com/in/oyku-kaplan/",
 		instagramUrl: "https://www.instagram.com/oyku_kaplan?igsh=MWN6N2F1bTZuM2l6cQ%3D%3D&utm_source=qr",
 		imageUrl: "/images/e-1.png",
 	},
 	{
 		name: "Nefise Genç",
-		role: "Yazılım Geliştiricisi",
+		roleKey: "developer",
 		linkedinUrl: "https://www.linkedin.com/in/nefise-gen%C3%A7-67ba66226/",
 		instagramUrl: "https://www.instagram.com/nefisegenc?igsh=OG9yMDB2ZWI1ZXZx&utm_source=qr",
 		imageUrl: "/images/e-2.png",
 	},
 	{
 		name: "Ali Nazaroğlu",
-		role: "Tasarımcı",
+		roleKey: "designer",
 		linkedinUrl: "https://www.linkedin.com/in/m-ali-nazaroglu-29b727176/",
 		instagramUrl: "https://www.instagram.com/m.nazaroglu/",
 		imageUrl: "/images/e-4.png",
 	},
 	{
 		name: "Şebnem Aldemir",
-		role: "Proje Yöneticisi",
+		roleKey: "projectManager",
 		linkedinUrl: "https://www.linkedin.com/in/%C5%9Febnem-aldemir-62a189245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
 		instagramUrl: "https://www.instagram.com/sebnemaldemir?igsh=b2JqZTIxN2RqeWhx&utm_source=qr",
 		imageUrl: "/images/e-3.png",
 	},
 ];
 
-const coreValues = [
-	{
-		icon: Heart,
-		title: "Kadınları ve Gençleri Güçlendirmek",
-		description: "Gençler ve kadınlar hayaller kurar, harekete geçer ve ilham verir.",
-		color: "#661a91",
-		tint: "rgba(102, 26, 145, 0.12)",
-		border: "rgba(102, 26, 145, 0.35)",
-	},
-	{
-		icon: BookOpen,
-		title: "Kaliteli ve Erişilebilir Eğitim",
-		description: "Her çocuk, güven veren ve umut taşıyan bir eğitimle güçlenmelidir.",
-		color: "#4D88B7",
-		tint: "rgba(77, 136, 183, 0.12)",
-		border: "rgba(77, 136, 183, 0.35)",
-	},
-	{
-		icon: Venus,
-		title: "Toplumsal Cinsiyet Eşitliği",
-		description: "Cinsiyet, sesimizi kısmak için değil; çeşitliliğimizi kutlamak içindir.",
-		color: "#DA1FA3",
-		tint: "rgba(218, 31, 163, 0.12)",
-		border: "rgba(218, 31, 163, 0.35)",
-	},
-];
+
 
 export default function HomePage() {
-	// Hero slider'ı kaldırıldığı için bu state ve fonksiyonlar artık kullanılmayacak.
-	// Eğer 'sliderImages' dizisi başka bir yerde kullanılıyorsa bu satırları silebilirsin.
-	const [currentSlide, setCurrentSlide] = useState(0);
-	const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
-	const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + sliderImages.length) % sliderImages.length);
+	const t = useTranslations("HomePage");
+	const locale = useLocale();
+	const projects = getProjects(locale);
 	const projectsScrollerRef = useRef<HTMLDivElement | null>(null);
+
+	const coreValues = [
+		{
+			icon: Heart,
+			title: t("values.empowerment.title"),
+			description: t("values.empowerment.description"),
+			color: "#661a91",
+			tint: "rgba(102, 26, 145, 0.12)",
+			border: "rgba(102, 26, 145, 0.35)",
+		},
+		{
+			icon: BookOpen,
+			title: t("values.education.title"),
+			description: t("values.education.description"),
+			color: "#4D88B7",
+			tint: "rgba(77, 136, 183, 0.12)",
+			border: "rgba(77, 136, 183, 0.35)",
+		},
+		{
+			icon: Venus,
+			title: t("values.equality.title"),
+			description: t("values.equality.description"),
+			color: "#DA1FA3",
+			tint: "rgba(218, 31, 163, 0.12)",
+			border: "rgba(218, 31, 163, 0.35)",
+		},
+	];
 
 	const scrollProjects = (direction: "left" | "right") => {
 		const container = projectsScrollerRef.current;
@@ -144,19 +113,19 @@ export default function HomePage() {
 						{/* Sol (Metin) */}
 						<div className="flex flex-col gap-6 text-center lg:text-left">
 							<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-hypatia-charcoal">
-								Birlikte Başarıyor,
+								{t("hero.title")}
 								<br />
-								<span className="text-[#661a91]">Birlikte Büyüyoruz!</span>
+								<span className="text-[#661a91]">{t("hero.highlight")}</span>
 							</h1>
 
 							<p className="text-base sm:text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0">
-								Kaliteli ve erişilebilir eğitimi desteklemek, toplumsal cinsiyet eşitliğini sağlamak ve gençler ile kadınların güçlenmesi için sosyal fayda odaklı projeler üretiyoruz.
+								{t("hero.description")}
 							</p>
 
 							<div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
 								<Link href="#projects">
 									<Button size="lg" className="btn-primary">
-										Projelerimizi İncele
+										{t("hero.projectsButton")}
 									</Button>
 								</Link>
 								<Dialog>
@@ -166,12 +135,12 @@ export default function HomePage() {
 											variant="outline"
 											className="bg-transparent border-2 border-[#661a91] text-[#661a91] hover:bg-[#661a91] hover:text-white transition-colors duration-300"
 										>
-											Aramıza Katıl
+											{t("hero.joinButton")}
 										</Button>
 									</DialogTrigger>
 									<DialogContent>
 										<DialogHeader>
-											<DialogTitle className="sr-only">Topluluğumuza Katıl</DialogTitle>
+											<DialogTitle className="sr-only">{t("hero.joinTitle")}</DialogTitle>
 										</DialogHeader>
 										<JoinForm />
 									</DialogContent>
@@ -183,7 +152,7 @@ export default function HomePage() {
 						<div className="w-full max-w-2xl sm:max-w-3xl lg:max-w-none lg:w-[48vw] mx-auto mt-8 lg:mt-0">
 							<Image
 								src={heroImageSrc}
-								alt="Hypatia Community ekibiyle buluşma"
+								alt="Hypatia Community"
 								width={980}
 								height={780}
 								className="w-full h-auto"
@@ -200,10 +169,10 @@ export default function HomePage() {
 			<section id="about" className="relative py-16 md:py-20 lg:py-28 bg-white scroll-mt-20">
 				<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 					<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-hypatia-charcoal">
-						Biz Kimiz?
+						{t("weAre.title")}
 					</h2>
 					<p className="mt-4 text-base sm:text-lg md:text-xl text-center text-muted-foreground max-w-3xl mx-auto">
-						Eğitime, eşitliğe ve toplumsal faydaya inanan; birlikte üreten <br /> ve birlikte büyüyen bir ekibiz.
+						{t("weAre.subtitle")}
 					</p>
 
 					{/* --- GÜNCELLEME: Misyon, Vizyon ve Değerler bölümleri modernize edildi --- */}
@@ -214,17 +183,16 @@ export default function HomePage() {
 							<div className="relative order-last md:order-first">
 								{/* Metin bloğu resmin üzerine binecek */}
 								<div className="relative z-10 md:transform md:-translate-x-8 p-8">
-									<h3 className="text-2xl sm:text-3xl font-bold text-[hsl(var(--hypatia-soft-purple))]">Misyonumuz</h3>
+									<h3 className="text-2xl sm:text-3xl font-bold text-[hsl(var(--hypatia-soft-purple))]">{t("mission.title")}</h3>
 									<p className="mt-4 text-lg text-muted-foreground">
-										Hypatia, toplumsal cinsiyet eşitliğini savunmak, kaliteli ve erişilebilir eğitimi yaygınlaştırmak ve gençlerle kadınların öncülüğünde gerçek etki yaratan sosyal sorumluluk projeleri geliştiren bir topluluktur.
-										Yerelden küresele uzanan bir dayanışma ağı kurarak, bireylerin sadece katılımcı değil, aynı zamanda değişimin aktif öznesi olmasını sağlıyoruz.
+										{t("mission.description")}
 									</p>
 								</div>
 							</div>
 							<div className="flex justify-center">
 								<Image
 									src="/images/h-1-4.png"
-									alt="Misyonumuz"
+									alt="Mission"
 									width={500}
 									height={400}
 									className="w-full h-80 object-cover"
@@ -237,7 +205,7 @@ export default function HomePage() {
 							<div className="flex justify-center">
 								<Image
 									src="/images/h-1-3.png"
-									alt="Vizyonumuz"
+									alt="Vision"
 									width={500}
 									height={400}
 									className="w-full h-80 object-cover"
@@ -246,11 +214,9 @@ export default function HomePage() {
 							<div className="relative">
 								{/* Metin bloğu resmin üzerine binecek */}
 								<div className="relative z-10 md:transform md:translate-x-8 p-8">
-									<h3 className="text-2xl sm:text-3xl font-bold text-[hsl(var(--hypatia-soft-pink))]">Vizyonumuz</h3>
+									<h3 className="text-2xl sm:text-3xl font-bold text-[hsl(var(--hypatia-soft-pink))]">{t("vision.title")}</h3>
 									<p className="mt-4 text-lg text-muted-foreground">
-										Hypatia, geleceği şekillendiren gençlerin ve kadınların liderlik ettiği küresel bir hareket olmayı hedefler.
-										Eğitimin erişilebilir olduğu, eşitliğin norm haline geldiği ve kolektif gücün sürdürülebilir bir dünyayı mümkün kıldığı bir gelecek inşa etmektir.
-										Bu vizyonla, gelecek nesilleri güçlendirmeye ve daha kapsayıcı, adil ve umut dolu bir toplumsal dönüşüme öncülük etmeye devam edeceğiz.
+										{t("vision.description")}
 									</p>
 								</div>
 							</div>
@@ -259,7 +225,7 @@ export default function HomePage() {
 
 					{/* Değerler */}
 					<div className="mt-24 md:mt-32">
-						<h3 className="text-3xl font-bold text-center text-hypatia-charcoal mb-16">Değerlerimiz</h3>
+						<h3 className="text-3xl font-bold text-center text-hypatia-charcoal mb-16">{t("values.title")}</h3>
 						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 							{coreValues.map(({ icon: Icon, title, description, color, tint, border }) => (
 								<div
@@ -288,14 +254,14 @@ export default function HomePage() {
 					{/* Projeler - YATAY SLIDER */}
 					<div id="projects" className="mt-24 md:mt-36 scroll-mt-20">
 						<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-hypatia-charcoal mb-12">
-							Projelerimiz
+							{t("projects.title")}
 						</h2>
 						<div className="relative">
 							<button
 								type="button"
 								onClick={() => scrollProjects("left")}
 								className="absolute left-2 top-1/2 z-10 hidden -translate-y-1/2 rounded-full border border-white/70 bg-white/90 p-2 text-hypatia-charcoal shadow-md transition hover:bg-white sm:flex"
-								aria-label="Önceki projeler"
+								aria-label="Previous"
 							>
 								<ChevronLeft className="h-5 w-5" />
 							</button>
@@ -303,7 +269,7 @@ export default function HomePage() {
 								type="button"
 								onClick={() => scrollProjects("right")}
 								className="absolute right-2 top-1/2 z-10 hidden -translate-y-1/2 rounded-full border border-white/70 bg-white/90 p-2 text-hypatia-charcoal shadow-md transition hover:bg-white sm:flex"
-								aria-label="Sonraki projeler"
+								aria-label="Next"
 							>
 								<ChevronRight className="h-5 w-5" />
 							</button>
@@ -332,10 +298,10 @@ export default function HomePage() {
 			<section id="team" className="py-16 md:py-20 lg:py-28 bg-hypatia-blue/10 scroll-mt-20">
 				<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 					<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-hypatia-charcoal mb-4">
-						Ekibimiz
+						{t("team.title")}
 					</h2>
 					<p className="text-lg text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-						Ekibimiz ile tanışın.
+						{t("team.subtitle")}
 					</p>
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 						{teamMembers.map((member) => (
@@ -345,7 +311,7 @@ export default function HomePage() {
 										<div className="mx-auto mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-lg">
 											<Image
 												src={member.imageUrl}
-												alt={`${member.name} portresi`}
+												alt={`${member.name}`}
 												width={96}
 												height={96}
 												className="h-full w-full object-cover"
@@ -353,7 +319,7 @@ export default function HomePage() {
 										</div>
 									)}
 									<h4 className="text-xl font-bold text-hypatia-charcoal">{member.name}</h4>
-									<p className="text-[#661a91] font-medium mt-1">{member.role}</p>
+									<p className="text-[#661a91] font-medium mt-1">{t(`team.roles.${member.roleKey}`)}</p>
 								</div>
 								<div className="absolute inset-0 flex items-center justify-center gap-5 opacity-0 transition-all duration-300 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0">
 									<Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-hypatia-blue hover:text-[hsl(var(--hypatia-soft-purple))] transition-colors">

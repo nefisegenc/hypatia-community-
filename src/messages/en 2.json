@@ -1,0 +1,186 @@
+{
+    "Metadata": {
+        "title": "Hypatia Community",
+        "description": "A young, dynamic and inspiring community."
+    },
+    "Navigation": {
+        "home": "Home",
+        "about": "About Us",
+        "projects": "Projects",
+        "team": "Our Team",
+        "join": "Join",
+        "openMenu": "Open Menu"
+    },
+    "Hero": {
+        "title1": "Succeeding Together,",
+        "title2": "Growing Together!",
+        "description": "We create social impact projects to support quality and accessible education, ensure gender equality, and empower youth and women.",
+        "exploreProjects": "Explore Our Projects",
+        "joinUs": "Join Us",
+        "imageAlt": "Meeting with Hypatia Community team"
+    },
+    "About": {
+        "title": "Who We Are",
+        "subtitle": "We are a team that believes in education, equality, and social benefit; we create together and grow together.",
+        "pageSubtitle": "We are a young and dynamic community shaping technology, creating together, and building the future.",
+        "mission": {
+            "title": "Our Mission",
+            "description1": "Hypatia is a community that advocates for gender equality, promotes quality and accessible education, and develops social responsibility projects that create real impact led by youth and women.",
+            "description2": "By building a solidarity network from local to global, we ensure that individuals are not just participants but active agents of change.",
+            "aboutPageDesc1": "Our mission at Hypatia is to bring together every young person interested in technology and design to maximize their potential. Through project-based learning methodology, we offer our members the opportunity to solve real-world problems and enrich their portfolios.",
+            "aboutPageDesc2": "We encourage our members from different disciplines to work collaboratively, enabling them to develop both their technical skills and teamwork competencies."
+        },
+        "vision": {
+            "title": "Our Vision",
+            "description1": "Hypatia aims to be a global movement led by youth and women who shape the future.",
+            "description2": "Our goal is to build a future where education is accessible, equality becomes the norm, and collective power makes a sustainable world possible.",
+            "description3": "With this vision, we will continue to empower future generations and lead a more inclusive, fair, and hopeful social transformation."
+        }
+    },
+    "Values": {
+        "title": "Our Values",
+        "subtitle": "The core principles that define us.",
+        "empowerment": {
+            "title": "Empowering Women and Youth",
+            "description": "Youth and women dream, take action, and inspire."
+        },
+        "education": {
+            "title": "Quality and Accessible Education",
+            "description": "Every child should be empowered with an education that provides confidence and carries hope."
+        },
+        "equality": {
+            "title": "Gender Equality",
+            "description": "Gender is not meant to silence our voices; it's meant to celebrate our diversity."
+        },
+        "innovation": {
+            "title": "Innovation and Creativity",
+            "description": "We encourage curiosity that pushes boundaries and pursues new and original ideas."
+        },
+        "collaboration": {
+            "title": "Collaboration and Community",
+            "description": "We believe success flourishes in a supportive environment where different talents come together."
+        },
+        "learning": {
+            "title": "Continuous Learning",
+            "description": "We keep pace with technology and see every project as an opportunity to improve ourselves."
+        }
+    },
+    "Projects": {
+        "title": "Our Projects",
+        "allProjects": "All Projects",
+        "allProjectsSubtitle": "The complete list of projects brought to life by our community.",
+        "backToProjects": "Back to All Projects",
+        "previousProjects": "Previous projects",
+        "nextProjects": "Next projects",
+        "supporters": "Supporters:"
+    },
+    "Team": {
+        "title": "Our Team",
+        "subtitle": "Meet our team.",
+        "roles": {
+            "founder": "Founder",
+            "developer": "Software Developer",
+            "designer": "Designer",
+            "projectManager": "Project Manager"
+        },
+        "imageAlt": "portrait"
+    },
+    "JoinForm": {
+        "title": "Join Our Community",
+        "subtitle": "Take the first step to become a part of Hypatia by filling out the form below.",
+        "name": "Your Full Name",
+        "namePlaceholder": "e.g. Ada Lovelace",
+        "email": "Your Email Address",
+        "emailPlaceholder": "ada@example.com",
+        "reason": "Why do you want to join?",
+        "reasonPlaceholder": "Feel free to share about yourself, your goals, and the value you can bring to the community...",
+        "website": "Your website",
+        "submit": "Submit Application",
+        "submitting": "Submitting...",
+        "successMessage": "Your application has been received! We'll get in touch with you soon. 🎉",
+        "errorRequired": "Please fill in your name and email address.",
+        "errorEmail": "Please enter a valid email address.",
+        "errorGeneric": "An error occurred while submitting your application. Please try again.",
+        "errorCooldown": "Please slow down :) You can try again in {seconds} seconds.",
+        "joinCommunity": "Join the Community",
+        "joinForm": "Join Form"
+    },
+    "Footer": {
+        "description": "We create social impact projects to support quality and accessible education, ensure gender equality, and empower youth and women.",
+        "pages": "Pages",
+        "contact": "Contact",
+        "mail": "Mail",
+        "copyright": "© 2023 Hypatia Community. All rights reserved.",
+        "privacyPolicy": "Privacy Policy",
+        "terms": "Terms of Use",
+        "contactUs": "Contact Us",
+        "networkTitle": "Hypatia Network",
+        "networkDescription": "Meet young leaders across Turkey, participate in our projects, and create social impact.",
+        "joinCommunity": "Join the Community"
+    },
+    "CTA": {
+        "readyToJoin": "Ready to Join Us?",
+        "ctaDescription": "We can't wait to develop amazing projects with passionate people like you.",
+        "applyNow": "Apply Now"
+    },
+    "PrivacyPolicy": {
+        "title": "Privacy Policy",
+        "intro": "At Hypatia Community, we value your privacy. This text summarizes what data we collect when you use our website, how we use it, and your rights.",
+        "dataCollected": {
+            "title": "Data Collected",
+            "description": "We may collect information such as name, surname, email address, school/city that you provide through contact forms, application forms, or email. Additionally, technical data related to your site usage (device, browser, IP, etc.) may be processed to a limited extent."
+        },
+        "dataUsage": {
+            "title": "Data Usage",
+            "description": "We use data to evaluate applications, provide feedback, communicate community announcements, and improve service quality."
+        },
+        "dataSharing": {
+            "title": "Data Sharing",
+            "description": "We do not share your personal data with third parties for marketing purposes. No sharing is done except for legal obligations or technical providers necessary to deliver the service."
+        },
+        "retention": {
+            "title": "Retention Period",
+            "description": "Data is retained for the period required by the processing purpose and deleted in accordance with relevant legal regulations."
+        },
+        "rights": {
+            "title": "Your Rights",
+            "description": "You can contact us to exercise your rights to access, correct, delete, and object to your personal data."
+        },
+        "contact": {
+            "title": "Contact",
+            "description": "For your questions, you can reach us at {email}."
+        }
+    },
+    "Terms": {
+        "title": "Terms of Use",
+        "intro": "By using this website, you agree to the following terms. If you do not accept these terms, please do not use the site.",
+        "scope": {
+            "title": "Scope of Service",
+            "description": "Hypatia Community provides information about community events and projects. Content is for informational purposes and may be changed without prior notice."
+        },
+        "userResponsibilities": {
+            "title": "User Responsibilities",
+            "description": "You agree to use the site in accordance with applicable laws and not to share misleading or harmful content."
+        },
+        "intellectualProperty": {
+            "title": "Intellectual Property",
+            "description": "Site content, texts, and images belong to Hypatia Community or are used with permission. They may not be reproduced without written permission."
+        },
+        "liability": {
+            "title": "Limitation of Liability",
+            "description": "Reasonable efforts are made for the accuracy of site content; however, content is not guaranteed to be complete or error-free."
+        },
+        "changes": {
+            "title": "Changes",
+            "description": "These terms may be updated from time to time. Updates take effect as soon as they are published on this page."
+        },
+        "contact": {
+            "title": "Contact",
+            "description": "For your questions, you can reach us at {email}."
+        }
+    },
+    "Language": {
+        "switchTo": "Türkçe'ye Geç",
+        "current": "EN"
+    }
+}

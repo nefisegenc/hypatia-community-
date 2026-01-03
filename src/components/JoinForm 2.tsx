@@ -1,9 +1,9 @@
-
 /* eslint-disable no-console */
 "use client";
 
 import { useState } from "react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,7 +11,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { db } from "@/lib/firebase";
-import { useTranslations } from "next-intl";
 
 type SubmitState = "idle" | "loading" | "success" | "error";
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -21,9 +20,9 @@ const HONEYPOT_FIELD = "website";
 const SUBMISSION_COOLDOWN_MS = 2 * 60 * 1000; // two minutes
 
 export function JoinForm() {
-    const t = useTranslations("JoinForm");
     const [status, setStatus] = useState<SubmitState>("idle");
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
+    const t = useTranslations("JoinForm");
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -47,7 +46,7 @@ export function JoinForm() {
                 const elapsed = now - Number(lastSubmission);
                 if (!Number.isNaN(elapsed) && elapsed < SUBMISSION_COOLDOWN_MS) {
                     const remaining = Math.ceil((SUBMISSION_COOLDOWN_MS - elapsed) / 1000);
-                    setErrorMessage(t("validation.cooldown", { seconds: remaining }));
+                    setErrorMessage(t("errorCooldown", { seconds: remaining }));
                     setStatus("error");
                     return;
                 }
@@ -62,13 +61,13 @@ export function JoinForm() {
         }
 
         if (name.length === 0 || email.length === 0) {
-            setErrorMessage(t("validation.required"));
+            setErrorMessage(t("errorRequired"));
             setStatus("error");
             return;
         }
 
         if (!EMAIL_REGEX.test(email)) {
-            setErrorMessage(t("validation.invalidEmail"));
+            setErrorMessage(t("errorEmail"));
             setStatus("error");
             return;
         }
@@ -93,7 +92,7 @@ export function JoinForm() {
             setTimeout(() => setStatus("idle"), 6000);
         } catch (error) {
             console.error("Join form submission failed", error);
-            setErrorMessage(t("errorMessage"));
+            setErrorMessage(t("errorGeneric"));
             setStatus("error");
         }
     };
@@ -103,21 +102,21 @@ export function JoinForm() {
             <CardHeader className="text-center">
                 <CardTitle className="text-2xl md:text-3xl font-bold">{t("title")}</CardTitle>
                 <CardDescription className="pt-2">
-                    {t("description")}
+                    {t("subtitle")}
                 </CardDescription>
             </CardHeader>
             <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="space-y-2">
-                        <Label htmlFor="name">{t("nameLabel")}</Label>
+                        <Label htmlFor="name">{t("name")}</Label>
                         <Input id="name" name="name" placeholder={t("namePlaceholder")} required />
                     </div>
                     <div className="space-y-2">
-                        <Label htmlFor="email">{t("emailLabel")}</Label>
+                        <Label htmlFor="email">{t("email")}</Label>
                         <Input id="email" name="email" type="email" placeholder={t("emailPlaceholder")} required />
                     </div>
                     <div className="space-y-2">
-                        <Label htmlFor="reason">{t("reasonLabel")}</Label>
+                        <Label htmlFor="reason">{t("reason")}</Label>
                         <Textarea
                             id="reason"
                             name="reason"
@@ -126,7 +125,7 @@ export function JoinForm() {
                         />
                     </div>
                     <div className="sr-only" aria-hidden="true">
-                        <Label htmlFor={HONEYPOT_FIELD}>Web siten</Label>
+                        <Label htmlFor={HONEYPOT_FIELD}>{t("website")}</Label>
                         <Input
                             id={HONEYPOT_FIELD}
                             name={HONEYPOT_FIELD}
@@ -153,7 +152,7 @@ export function JoinForm() {
                         className="w-full bg-hypatia-pink hover:bg-pink-600 text-white font-bold text-lg py-6"
                         disabled={status === "loading"}
                     >
-                        {status === "loading" ? t("submitting") : t("submitButton")}
+                        {status === "loading" ? t("submitting") : t("submit")}
                     </Button>
                 </form>
             </CardContent>
