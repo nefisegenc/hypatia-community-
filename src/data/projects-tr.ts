@@ -97,7 +97,7 @@ export const projects: Project[] = [
             results: {
                 title: "Sonuç ve Etki",
                 paragraphs: [
-                    "• Toplumumsal düzeyde regl üzerine açık konuşma kültürüne katkı sağlandı.", "• Katılımcılar arasında beden farkındalığı, utanmadan konuşabilme ve dayanışma duygusu güçlendi.", "• Hypatia topluluğu, bu etkinlikle birlikte Türkiye’deki genç kadınlar ve erkekler arasında eşitlikçi ve kapsayıcı diyalogların yaygınlaşmasına öncülük etti."
+                    "• Toplumsal düzeyde regl üzerine açık konuşma kültürüne katkı sağlandı.", "• Katılımcılar arasında beden farkındalığı, utanmadan konuşabilme ve dayanışma duygusu güçlendi.", "• Hypatia topluluğu, bu etkinlikle birlikte Türkiye’deki genç kadınlar ve erkekler arasında eşitlikçi ve kapsayıcı diyalogların yaygınlaşmasına öncülük etti."
                 ]
             },
             gallery: [
@@ -306,11 +306,11 @@ export const projects: Project[] = [
         slug: "deprem-dayanisma-projesi-matematik",
         title: "Deprem Dayanışma Projesi (2025)",
         description: "Depremden etkilenen 6, 7 ve 8. sınıf öğrencilerine yönelik ücretsiz ve online matematik eğitimi projesi.",
-        imageUrl: "/images/h-9.jpeg",
+        imageUrl: "/images/h-9.png",
         detail: {
             heroTitle: "Deprem Dayanışma Projesi (2025)",
             heroSubtitle: "Ücretsiz ve Online Matematik Eğitimi",
-            heroImageUrl: "/images/h-9.jpeg",
+            heroImageUrl: "/images/h-9.png",
             categories: ["Eğitim", "Sosyal Dayanışma", "Afet Sonrası Destek"],
             goal: {
                 title: "Projenin Amacı",
@@ -349,8 +349,8 @@ export const projects: Project[] = [
                 ],
             },
             gallery: [
-                { src: "/images/h-9.jpeg", alt: "Deprem Dayanışma Projesi (2025) öğrenci buluşması", caption: "" },
-                { src: "/images/h-10.jpeg", alt: "Deprem Dayanışma Projesi (2025) dayanışma anı", caption: "" }
+                { src: "/images/h-9-1.jpg", alt: "Deprem Dayanışma Projesi (2025) öğrenci buluşması", caption: "" },
+                { src: "/images/h-10.jpg", alt: "Deprem Dayanışma Projesi (2025) dayanışma anı", caption: "" }
             ],
             finalMessage: {
                 title: "",
