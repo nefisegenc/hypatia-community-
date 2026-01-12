@@ -98,16 +98,17 @@ export function ProjectGallery({ images }: ProjectGalleryProps) {
                             <X className="h-5 w-5" />
                         </button>
 
-                        <div className="relative overflow-hidden rounded-3xl bg-black">
-                            <Image
-                                src={selectedImage.src}
-                                alt={selectedImage.alt}
-                                width={1600}
-                                height={1200}
-                                className="h-auto w-full object-contain"
-                                sizes="(min-width: 1024px) 60vw, 90vw"
-                                priority
-                            />
+                        <div className="relative mx-auto w-full max-w-4xl overflow-hidden rounded-3xl bg-black">
+                            <div className="relative aspect-[4/3] w-full">
+                                <Image
+                                    src={selectedImage.src}
+                                    alt={selectedImage.alt}
+                                    fill
+                                    className="object-contain"
+                                    sizes="(min-width: 1024px) 60vw, 90vw"
+                                    priority
+                                />
+                            </div>
                         </div>
 
                         {selectedImage.caption.trim() && (
