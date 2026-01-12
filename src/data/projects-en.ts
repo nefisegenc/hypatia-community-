@@ -308,8 +308,8 @@ export const projectsEn: Project[] = [
                 ],
             },
             gallery: [
-                { src: "/images/h-9.jpeg", alt: "Earthquake Solidarity Project (2025) student meeting", caption: "" },
-                { src: "/images/h-10.jpeg", alt: "Earthquake Solidarity Project (2025) solidarity moment", caption: "" }
+                { src: "/images/h-9.png", alt: "Earthquake Solidarity Project (2025) student meeting", caption: "" },
+                { src: "/images/h-10.jpg", alt: "Earthquake Solidarity Project (2025) solidarity moment", caption: "" }
             ],
             finalMessage: {
                 title: "",

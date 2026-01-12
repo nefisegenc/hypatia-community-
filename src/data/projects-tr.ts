@@ -349,7 +349,7 @@ export const projects: Project[] = [
                 ],
             },
             gallery: [
-                { src: "/images/h-9-1.jpg", alt: "Deprem Dayanışma Projesi (2025) öğrenci buluşması", caption: "" },
+                { src: "/images/h-9.png", alt: "Deprem Dayanışma Projesi (2025) öğrenci buluşması", caption: "" },
                 { src: "/images/h-10.jpg", alt: "Deprem Dayanışma Projesi (2025) dayanışma anı", caption: "" }
             ],
             finalMessage: {
