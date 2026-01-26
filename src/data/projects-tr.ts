@@ -101,8 +101,8 @@ export const projects: Project[] = [
                 ]
             },
             gallery: [
-                { src: "/images/IMG_0664.JPG", alt: "Regl farkındalığı etkinliğinde ekibimiz", caption: "" },
-                { src: "/images/IMG_0735.JPG", alt: "Regl farkındalığı etkinliğinden bir diğer an", caption: "" }
+                { src: "/images/regl-farkindaligi-1.jpg", alt: "Regl farkındalığı etkinliğinden bir kare", caption: "" },
+                { src: "/images/regl-farkindaligi-2.jpg", alt: "Regl farkındalığı etkinliği katılımcıları", caption: "" }
             ],
             finalMessage: {
                 title: "",
@@ -167,8 +167,8 @@ export const projects: Project[] = [
                 ]
             },
             gallery: [
-                { src: "/images/h-2.jpeg", alt: "Deprem Dayanışma Projesi (2023-2025) ders oturumu", caption: "" },
-                { src: "/images/h-3.jpeg", alt: "Deprem Dayanışma Projesi (2023-2025) gönüllü buluşması", caption: "" }
+                { src: "/images/deprem-dayanisma-2023-1.jpg", alt: "Deprem Dayanışma Projesi (2023-2025) ders oturumu", caption: "" },
+                { src: "/images/deprem-dayanisma-2023-2.jpg", alt: "Deprem Dayanışma Projesi (2023-2025) gönüllü buluşması", caption: "" }
             ],
             finalMessage: {
                 title: "",
@@ -292,8 +292,8 @@ export const projects: Project[] = [
                 ]
             },
             gallery: [
-                { src: "/images/h-8.jpeg", alt: "Genç bir kadın bilgisayar başında gülümsüyor", caption: "" },
-                { src: "/images/h-11.jpeg", alt: "Gençlik Haritası proje buluşması", caption: "" }
+                { src: "/images/genclik-haritasi-1.jpg", alt: "Genç bir kadın bilgisayar başında gülümsüyor", caption: "" },
+                { src: "/images/genclik-haritasi-2.jpg", alt: "Gençlik Haritası proje buluşması", caption: "" }
             ],
             finalMessage: {
                 title: "",
@@ -349,8 +349,8 @@ export const projects: Project[] = [
                 ],
             },
             gallery: [
-                { src: "/images/h-9.png", alt: "Deprem Dayanışma Projesi (2025) öğrenci buluşması", caption: "" },
-                { src: "/images/h-10.jpg", alt: "Deprem Dayanışma Projesi (2025) dayanışma anı", caption: "" }
+                { src: "/images/deprem-dayanisma-2025-1.jpg", alt: "Deprem Dayanışma Projesi (2025) öğrenci buluşması", caption: "" },
+                { src: "/images/deprem-dayanisma-2025-2.jpg", alt: "Deprem Dayanışma Projesi (2025) dayanışma anı", caption: "" }
             ],
             finalMessage: {
                 title: "",

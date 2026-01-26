@@ -52,8 +52,8 @@ export const projectsEn: Project[] = [
                 ]
             },
             gallery: [
-                { src: "/images/IMG_0664.JPG", alt: "Our team at the menstrual awareness event", caption: "" },
-                { src: "/images/IMG_0735.JPG", alt: "Another moment from the menstrual awareness event", caption: "" }
+                { src: "/images/regl-farkindaligi-1.jpg", alt: "A moment from the menstrual awareness event", caption: "" },
+                { src: "/images/regl-farkindaligi-2.jpg", alt: "Menstrual awareness event participants", caption: "" }
             ],
             finalMessage: {
                 title: "",
@@ -118,8 +118,8 @@ export const projectsEn: Project[] = [
                 ]
             },
             gallery: [
-                { src: "/images/h-2.jpeg", alt: "Earthquake Solidarity Project (2023-2025) lesson session", caption: "" },
-                { src: "/images/h-3.jpeg", alt: "Earthquake Solidarity Project (2023-2025) volunteer meeting", caption: "" }
+                { src: "/images/deprem-dayanisma-2023-1.jpg", alt: "Earthquake Solidarity Project (2023-2025) lesson session", caption: "" },
+                { src: "/images/deprem-dayanisma-2023-2.jpg", alt: "Earthquake Solidarity Project (2023-2025) volunteer meeting", caption: "" }
             ],
             finalMessage: {
                 title: "",
@@ -251,8 +251,8 @@ export const projectsEn: Project[] = [
                 ]
             },
             gallery: [
-                { src: "/images/h-8.jpeg", alt: "Young woman smiling at computer", caption: "" },
-                { src: "/images/h-11.jpeg", alt: "Youth Map project meeting", caption: "" }
+                { src: "/images/genclik-haritasi-1.jpg", alt: "Young woman smiling at computer", caption: "" },
+                { src: "/images/genclik-haritasi-2.jpg", alt: "Youth Map project meeting", caption: "" }
             ],
             finalMessage: {
                 title: "",
@@ -308,8 +308,8 @@ export const projectsEn: Project[] = [
                 ],
             },
             gallery: [
-                { src: "/images/h-9.png", alt: "Earthquake Solidarity Project (2025) student meeting", caption: "" },
-                { src: "/images/h-10.jpg", alt: "Earthquake Solidarity Project (2025) solidarity moment", caption: "" }
+                { src: "/images/deprem-dayanisma-2025-1.jpg", alt: "Earthquake Solidarity Project (2025) student meeting", caption: "" },
+                { src: "/images/deprem-dayanisma-2025-2.jpg", alt: "Earthquake Solidarity Project (2025) solidarity moment", caption: "" }
             ],
             finalMessage: {
                 title: "",
