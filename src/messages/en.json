@@ -41,11 +41,15 @@
         "team": {
             "title": "Our Team",
             "subtitle": "Meet our team.",
+            "extendedLabel": "Growing Team",
+            "extendedTitle": "Our expanding team structure",
+            "extendedSubtitle": "You can see our core team above and the members contributing to project and operations flow below. This area is ready for new names as the team grows.",
             "roles": {
                 "founder": "Founder",
                 "developer": "Software Developer",
                 "designer": "Designer",
-                "projectManager": "Project Manager"
+                "projectManager": "Project Manager",
+                "newMember": "New team member"
             }
         }
     },

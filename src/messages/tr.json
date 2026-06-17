@@ -41,11 +41,15 @@
         "team": {
             "title": "Ekibimiz",
             "subtitle": "Ekibimiz ile tanışın.",
+            "extendedLabel": "Genişleyen Kadro",
+            "extendedTitle": "Büyüyen ekip yapımız",
+            "extendedSubtitle": "Üstte çekirdek ekibimizi, altta ise proje ve operasyon akışına katkı sunan ekip üyelerini görebilirsiniz. Ekibimiz büyüdükçe bu alan yeni isimler için hazır.",
             "roles": {
                 "founder": "Kurucu",
                 "developer": "Yazılım Geliştiricisi",
                 "designer": "Tasarımcı",
-                "projectManager": "Proje Yöneticisi"
+                "projectManager": "Proje Yöneticisi",
+                "newMember": "Yeni ekip üyesi"
             }
         }
     },

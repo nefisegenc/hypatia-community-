@@ -21,7 +21,16 @@ import { useTranslations, useLocale } from "next-intl";
 // Hero bölümünde kullanılacak görselin kaynağı
 const heroImageSrc = "/images/h-1-1.png";
 
-const teamMembers = [
+type TeamMember = {
+	name: string;
+	roleKey: "founder" | "developer" | "designer" | "projectManager" | "newMember";
+	roleLabel?: string;
+	linkedinUrl?: string;
+	instagramUrl?: string;
+	imageUrl?: string;
+};
+
+const teamMembers: TeamMember[] = [
 	{
 		name: "Öykü Kaplan",
 		roleKey: "founder",
@@ -32,23 +41,73 @@ const teamMembers = [
 	{
 		name: "Nefise Genç",
 		roleKey: "developer",
+		roleLabel: "Yazılım ve Dijital İçerik Ekip Lideri",
 		linkedinUrl: "https://www.linkedin.com/in/nefise-gen%C3%A7-67ba66226/",
 		instagramUrl: "https://www.instagram.com/nefisegenc?igsh=OG9yMDB2ZWI1ZXZx&utm_source=qr",
 		imageUrl: "/images/e-2.png",
 	},
 	{
-		name: "Ali Nazaroğlu",
+		name: "Beste Erdal",
 		roleKey: "designer",
+		roleLabel: "İçerik ve Tasarım Ekip Lideri",
+		linkedinUrl: "https://www.linkedin.com/in/beste-z-erdal-373b86265/",
+		instagramUrl: "https://www.instagram.com/bestez.erdal/",
+		imageUrl: "/images/e-5.png",
+	},
+	{
+		name: "Şebnem Aldemir",
+		roleKey: "projectManager",
+		roleLabel: "Proje Ekip Lideri",
+		linkedinUrl: "https://www.linkedin.com/in/%C5%9Febnem-aldemir-62a189245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+		instagramUrl: "https://www.instagram.com/sebnemaldemir?igsh=b2JqZTIxN2RqeWhx&utm_source=qr",
+		imageUrl: "/images/e-3.png",
+	},
+	{
+		name: "Büşra Polat",
+		roleKey: "newMember",
+		roleLabel: "Proje Yöneticisi",
+		linkedinUrl: "https://www.linkedin.com/in/b%C3%BC%C5%9Fra-polat-9445201a3/",
+		instagramUrl: "https://www.instagram.com/busrraplt/",
+		imageUrl: "/images/e-7.png",
+	},
+	{
+		name: "Emre Kutan Nural",
+		roleKey: "newMember",
+		roleLabel: "Proje Yöneticisi",
+		linkedinUrl: "https://www.linkedin.com/in/emre-kutan-nural/",
+		instagramUrl: "https://www.instagram.com/kutannural/",
+		imageUrl: "/images/e-8.png",
+	},
+	{
+		name: "İpeksu Aydın",
+		roleKey: "newMember",
+		roleLabel: "Proje Yöneticisi",
+		linkedinUrl: "https://www.linkedin.com/in/ipeksu-aydin/",
+		imageUrl: "/images/e-9.png",
+	},
+	{
+		name: "Ali Nazaroğlu",
+		roleKey: "newMember",
+		roleLabel: "Tasarımcı",
 		linkedinUrl: "https://www.linkedin.com/in/m-ali-nazaroglu-29b727176/",
 		instagramUrl: "https://www.instagram.com/m.nazaroglu/",
 		imageUrl: "/images/e-4.png",
 	},
 	{
-		name: "Şebnem Aldemir",
-		roleKey: "projectManager",
-		linkedinUrl: "https://www.linkedin.com/in/%C5%9Febnem-aldemir-62a189245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-		instagramUrl: "https://www.instagram.com/sebnemaldemir?igsh=b2JqZTIxN2RqeWhx&utm_source=qr",
-		imageUrl: "/images/e-3.png",
+		name: "İdil Tavlan",
+		roleKey: "newMember",
+		roleLabel: "Video Editörü",
+		linkedinUrl: "https://www.linkedin.com/in/idil-tavlan-825b88268/",
+		instagramUrl: "https://www.instagram.com/idil_tavlan_?igsh=MXhncmMxa2VvbGVrNA==",
+		imageUrl: "/images/e-10.png",
+	},
+	{
+		name: "Demirkan Şimşek",
+		roleKey: "newMember",
+		roleLabel: "Tasarımcı",
+		linkedinUrl: "https://www.linkedin.com/in/demirkan-%C5%9Fim%C5%9Fek-508533255/",
+		instagramUrl: "https://www.instagram.com/demirkansimsek/",
+		imageUrl: "/images/e-6.png",
 	},
 ];
 
@@ -59,6 +118,8 @@ export default function HomePage() {
 	const locale = useLocale();
 	const projects = getProjects(locale);
 	const projectsScrollerRef = useRef<HTMLDivElement | null>(null);
+	const firstRowMembers = teamMembers.slice(0, 4);
+	const remainingTeamMembers = teamMembers.slice(4);
 
 	const coreValues = [
 		{
@@ -304,14 +365,14 @@ export default function HomePage() {
 						{t("team.subtitle")}
 					</p>
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-						{teamMembers.map((member) => (
-							<div key={member.name} className="card relative text-center flex flex-col justify-center items-center p-6 min-h-[140px] overflow-hidden group">
+						{firstRowMembers.map((member, index) => (
+							<div key={`${member.name}-${index}`} className="card relative text-center flex flex-col justify-center items-center p-6 min-h-[140px] overflow-hidden group">
 								<div className="transition-all duration-300 group-hover:opacity-0 group-hover:-translate-y-4">
 									{member.imageUrl && (
 										<div className="mx-auto mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-lg">
 											<Image
 												src={member.imageUrl}
-												alt={`${member.name}`}
+												alt={member.name}
 												width={96}
 												height={96}
 												className="h-full w-full object-cover"
@@ -319,21 +380,58 @@ export default function HomePage() {
 										</div>
 									)}
 									<h4 className="text-xl font-bold text-hypatia-charcoal">{member.name}</h4>
-									<p className="text-[#661a91] font-medium mt-1">{t(`team.roles.${member.roleKey}`)}</p>
+									<p className="text-[#661a91] font-medium mt-1">{member.roleLabel ?? t(`team.roles.${member.roleKey}`)}</p>
+									</div>
+									<div className="absolute inset-0 flex items-center justify-center gap-5 opacity-0 transition-all duration-300 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0">
+										{member.linkedinUrl && (
+											<Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-hypatia-blue hover:text-[hsl(var(--hypatia-soft-purple))] transition-colors">
+												<Linkedin size={28} />
+											</Link>
+										)}
+										{member.instagramUrl && (
+											<Link href={member.instagramUrl} target="_blank" rel="noopener noreferrer" className="text-hypatia-blue hover:text-[hsl(var(--hypatia-soft-pink))] transition-colors">
+												<Instagram size={28} />
+											</Link>
+										)}
+									</div>
 								</div>
-								<div className="absolute inset-0 flex items-center justify-center gap-5 opacity-0 transition-all duration-300 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0">
-									<Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-hypatia-blue hover:text-[hsl(var(--hypatia-soft-purple))] transition-colors">
-										<Linkedin size={28} />
-									</Link>
-									<Link href={member.instagramUrl} target="_blank" rel="noopener noreferrer" className="text-hypatia-blue hover:text-[hsl(var(--hypatia-soft-pink))] transition-colors">
-										<Instagram size={28} />
-									</Link>
+							))}
+						</div>
+					<div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+						{remainingTeamMembers.map((member, index) => (
+							<div key={`${member.name}-extra-${index}`} className="card relative text-center flex flex-col justify-center items-center p-6 min-h-[140px] overflow-hidden group">
+								<div className="transition-all duration-300 group-hover:opacity-0 group-hover:-translate-y-4">
+									{member.imageUrl && (
+										<div className="mx-auto mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-lg">
+											<Image
+												src={member.imageUrl}
+												alt={member.name}
+												width={96}
+												height={96}
+												className="h-full w-full object-cover"
+											/>
+										</div>
+									)}
+									<h4 className="text-xl font-bold text-hypatia-charcoal">{member.name}</h4>
+									<p className="text-[#661a91] font-medium mt-1">{member.roleLabel ?? t(`team.roles.${member.roleKey}`)}</p>
+									</div>
+									<div className="absolute inset-0 flex items-center justify-center gap-5 opacity-0 transition-all duration-300 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0">
+										{member.linkedinUrl && (
+											<Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-hypatia-blue hover:text-[hsl(var(--hypatia-soft-purple))] transition-colors">
+												<Linkedin size={28} />
+											</Link>
+										)}
+										{member.instagramUrl && (
+											<Link href={member.instagramUrl} target="_blank" rel="noopener noreferrer" className="text-hypatia-blue hover:text-[hsl(var(--hypatia-soft-pink))] transition-colors">
+												<Instagram size={28} />
+											</Link>
+										)}
+									</div>
 								</div>
-							</div>
-						))}
-					</div>
+							))}
+						</div>
 				</div>
 			</section>
-		</>
-	);
-}
+			</>
+		);
+	}
